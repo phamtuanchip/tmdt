@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link href="browser.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript">
+
+var oListManager = new Object() ;
+oListManager.Clear = function()
+{
+	document.body.innerHTML = '' ;
+}
+oListManager.GetFolderRowHtml = function( folderName, folderPath )
+{
+	// Build the link to view the folder.
+	var sLink = '<a class="folder" href="#" onclick="OpenFolder(\'' + folderPath.replace( /'/g, '\\\'') + '\');return false;">' ;
+	return sLink + '<img alt="" src="images/thumuc.jpg" border="0"></a><br>'+ sLink+ folderName;
+}
+oListManager.GetFileRowHtml = function( fileName, fileUrl, fileSize )
+{       
+	var sLink ='';
+	var sIcon = oIcons.GetIcon( fileName ) ;
+	return fileName;
+}
+function OpenFolder( folderPath )
+{
+	// Load the resources list for this folder.
+	window.parent.frames['frmFolders'].LoadFolders( folderPath ) ;
+}
+function OpenFile( fileUrl )
+{
+	window.top.opener.SetUrl( fileUrl ) ;
+	window.top.close() ;
+	window.top.opener.focus() ;
+}
+
+function LoadResources( resourceType, folderPath )
+{
+	oListManager.Clear() ;
+	oConnector.ResourceType = resourceType ;
+	oConnector.CurrentFolder = folderPath
+	oConnector.SendCommand( 'GetFoldersAndFiles', null, GetFoldersAndFilesCallBack ) ;
+}
+
+function Refresh()
+{
+	LoadResources( oConnector.ResourceType, oConnector.CurrentFolder ) ;
+}
+
+function GetFoldersAndFilesCallBack( fckXml )
+{
+	if ( oConnector.CheckError( fckXml ) != 0 )
+		return ;
+	// Get the current folder path.
+	var oNode = fckXml.SelectSingleNode( 'Connector/CurrentFolder' ) ;
+	var sCurrentFolderPath	= oNode.attributes.getNamedItem('path').value ;
+	var sCurrentFolderUrl	= oNode.attributes.getNamedItem('url').value ;
+
+	var oHtml = new StringBuilder( '<table id="tableFolder" cellspacing="5" cellpadding="5" width="100%" border="0" align="center" style="border: 1px solid #000000">' ) ;
+	// Add the Folders.	
+	var oNodes = fckXml.SelectNodes( 'Connector/Folders/Folder' ) ;
+	oHtml.Append("<tr>");
+	var colummtoSplit =6;
+	for ( var i = 0 ; i < oNodes.length ; i++ )
+	{
+	    oHtml.Append("<td align='center'>");
+		var sFolderName = oNodes[i].attributes.getNamedItem('name').value ;		
+		oHtml.Append(oListManager.GetFolderRowHtml( sFolderName, sCurrentFolderPath + sFolderName + "/" ) ) ;
+		oHtml.Append("</td>");
+		var j = i+ 1;
+		if(j % colummtoSplit ==0)
+	    {		        
+	        oHtml.Append("</tr>");
+	    }
+	}
+	oHtml.Append("</table>");
+	oHtml.Append("<br />");
+	oHtml.Append('<table id="tableFiles" cellspacing="5" cellpadding="5" width="100%" border="1" align="center" style="border: 1px solid #000000">');    
+	// Add the Files.	
+	var oNodes = fckXml.SelectNodes( 'Connector/Files/File' ) ;	
+	oHtml.Append("<tr>");
+	for ( var o = 0 ; o < oNodes.length ; o++ )
+	{	    
+        oHtml.Append('<td align="center" width="98" height="98" valign="middle">'); 
+	    var oNode = oNodes[o] ;
+	    var sFileName = oNode.attributes.getNamedItem('name').value ;
+	    var sFileSize = oNode.attributes.getNamedItem('size').value ;
+	    var left = sFileName.substring(0,sFileName.length-4);
+	    var lengLeft = left.length;
+	    var ext = sFileName.substring(lengLeft,sFileName.length);
+	    switch (ext)
+	    {
+	        case '.jpg':
+	            oHtml.Append('<img style="cursor:hand" border="0" alt='+sFileName+' onclick="OpenFile(\'' + (sCurrentFolderUrl+sFileName).replace( /'/g, '\\\'') + '\');return false;" width="64" height="64" src="'+ sCurrentFolderUrl + oListManager.GetFileRowHtml( sFileName, sFileName, sFileSize )+'">' ) ;
+	            break;
+            case '.png':
+                oHtml.Append('<img style="cursor:hand" border="0" alt='+sFileName+' onclick="OpenFile(\'' + (sCurrentFolderUrl+sFileName).replace( /'/g, '\\\'') + '\');return false;" width="64" height="64" src="'+ sCurrentFolderUrl + oListManager.GetFileRowHtml( sFileName, sFileName, sFileSize )+'">' ) ;
+                break;
+	        case '.gif':
+	            oHtml.Append('<img style="cursor:hand" border="0" alt='+sFileName+' onclick="OpenFile(\'' + (sCurrentFolderUrl+sFileName).replace( /'/g, '\\\'') + '\');return false;" width="64" height="64" src="'+ sCurrentFolderUrl + oListManager.GetFileRowHtml( sFileName, sFileName, sFileSize )+'">' ) ;
+	            break;
+	        case '.bmp':
+	            oHtml.Append('<img style="cursor:hand" border="0" alt='+sFileName+' onclick="OpenFile(\'' + (sCurrentFolderUrl+sFileName).replace( /'/g, '\\\'') + '\');return false;" width="64" height="64" src="'+ sCurrentFolderUrl + oListManager.GetFileRowHtml( sFileName, sFileName, sFileSize )+'">' ) ;
+	            break;
+	        case '.zip':
+	            oHtml.Append('<img border="0" alt='+sFileName+' onclick="OpenFile(\'' + (sCurrentFolderUrl+sFileName).replace( /'/g, '\\\'') + '\');return false;" width="90" height="100" src="Images/zip.jpg">' ) ;
+	            break;
+	        case '.rar':
+	            oHtml.Append('<img border="0" alt='+sFileName+' onclick="OpenFile(\'' + (sCurrentFolderUrl+sFileName).replace( /'/g, '\\\'') + '\');return false;" width="90" height="100" src="Images/zip.jpg">' ) ;
+	            break;
+            case '.xls':
+                oHtml.Append('<img border="0" alt='+sFileName+' onclick="OpenFile(\'' + (sCurrentFolderUrl+sFileName).replace( /'/g, '\\\'') + '\');return false;" width="90" height="100" src="Images/xls.jpg">' ) ;
+                break;
+            case '.doc':
+                oHtml.Append('<img border="0" alt='+sFileName+' onclick="OpenFile(\'' + (sCurrentFolderUrl+sFileName).replace( /'/g, '\\\'') + '\');return false;" width="90" height="100" src="Images/doc.jpg">' ) ;
+                break;
+            case '.pdf':
+                oHtml.Append('<img border="0" alt='+sFileName+' width="90" height="100" src="Images/pdf.jpg">' ) ;
+                break;
+            case '.txt':
+                oHtml.Append('<img border="0" alt='+sFileName+' width="90" height="100" src="Images/txt.jpg">' ) ;
+                break;
+	        default:
+	            oHtml.Append('<img border="0" alt='+sFileName+' width="90" height="100" src="Images/Unknow.jpg">' ) ;
+	            break;
+	    }
+	    oHtml.Append('</td>');
+	    var e= o +1;	    
+	    if(e % colummtoSplit==0)
+	    {
+	        oHtml.Append("</tr>");
+	    }	    
+	}    
+	oHtml.Append( '</table>' ) ;	
+	document.body.innerHTML = oHtml.ToString() ;
+}
+
+window.onload = function()
+{
+	window.top.IsLoadedResourcesList = true ;
+}
+	</script>
+</head>
+<body class="FileArea" bottommargin="10" leftmargin="10" topmargin="10" rightmargin="10">
+</body>
+</html>
+ 

@@ -1,0 +1,1 @@
+This file has been created by Acunetix Web Vulnerability Scanner to test if this directory is writable.

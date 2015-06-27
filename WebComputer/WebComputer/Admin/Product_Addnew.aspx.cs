@@ -1,0 +1,506 @@
+﻿using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using System.Text;
+using System.IO;
+using System.Xml;
+using System.Data.SqlClient;
+using Entity;
+using Bussiness;
+
+
+namespace WebComputer.Admin
+{
+    public partial class Product_Addnew : System.Web.UI.Page
+    {
+        public Bussiness.DataAccess objConn = new DataAccess();
+        public Entity.Entities objEntities = new Entity.Entities();
+        public Bussiness.BusinessLogic objBusinessLogic = new BusinessLogic();
+
+        protected Hashtable Lang = new Hashtable();
+        private string strAllowFunctions = "Product_AddNew";
+        private string strFunctionName = "Thêm mới sản phẩm";
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            Lang = objEntities.GetLanguage("Product_Manager");
+            this.Product_AddNew.Text = Lang["AddNew"].ToString();
+            this.Reset_Form.Value = Lang["reset"].ToString();
+            this.Back_AddNew.Value = Lang["Return"].ToString();
+
+            if (Session["AdminID"] == null)
+            {
+                Response.Write("<script language='javascript'>alert('Bạn phải đăng nhập / You must login');location.href='Login.aspx?ReturnUrl=Default.aspx';</script>");
+            }
+            else
+            {
+                if (objBusinessLogic.Permission(this.strAllowFunctions) == true)
+                {
+                    if (!IsPostBack)
+                    {
+                        this.ShowStatus();
+                        this.GetLibraryImages();
+                        this.objBusinessLogic.GetLanguage(this.DDL_Language);
+                       // this.ShowProvider();
+                    }
+                }
+                else
+                {
+                    Response.Redirect("EOFPermission.aspx");
+                }
+            }
+        }
+        #region show status product
+        protected void ShowStatus()
+        {
+            DataTable tableStatus = new DataTable();
+            tableStatus = objBusinessLogic.CreateDataTable("Get_Status_Product");
+            this.DDL_Status.Items.Add(new ListItem(this.Lang["SelectStatus"].ToString(), ""));
+            for (int i = 0; i < tableStatus.Rows.Count; i++)
+            {
+                this.DDL_Status.Items.Add(new ListItem(tableStatus.Rows[i]["Status_Name"].ToString(), tableStatus.Rows[i]["Status_Id"].ToString()));
+            }
+        }
+        #endregion
+        #region Live show
+        protected void GetLibraryImages()
+        {
+            StringBuilder tbl = new StringBuilder();
+            SqlDataAdapter adt = new SqlDataAdapter();
+            SqlCommand comm = new SqlCommand("Get_Library_Image_Product", this.objConn.SqlConn());
+            comm.CommandType = CommandType.StoredProcedure;
+            comm.Connection.Open();
+            adt.SelectCommand = comm;
+            DataSet ds = new DataSet();
+            try
+            {
+                adt.Fill(ds);
+                PagedDataSource paged = new PagedDataSource();
+                paged.DataSource = ds.Tables[0].DefaultView;
+
+                this.DL_Images.DataSource = paged;
+                this.DL_Images.DataBind();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message.ToString());
+            }
+            finally
+            {
+                ds.Clear();
+                adt.Dispose();
+                comm.Connection.Close();
+                comm.Connection.Dispose();
+            }
+        }
+        #endregion
+        #region Upload images
+        protected void LibraryImage_AddNew_Click(object sender, EventArgs e)
+        {
+            if (Session["AdminID"] == null)
+            {
+                Response.Write("<script language='javascript'>alert('Bạn phải đăng nhập / You must login');location.href='Login.aspx?ReturnUrl=Default.aspx';</script>");
+            }
+            else
+            {
+                if (objBusinessLogic.Permission(this.strAllowFunctions) == true)
+                {
+                    InsertLibraryImage();
+                }
+                else
+                {
+                    Response.Redirect("EOFPermission.aspx");
+                }
+            }
+        }
+        protected void InsertLibraryImage()
+        {
+            bool Flag_Upload = false;
+            string strDateTime = string.Empty;
+            string strDateTimeImg = string.Empty;
+            int MaxWidth = 0;
+            int WidthToResize = 0;
+            int ImgWidth = 0;
+            int ImgHieght = 0;
+            int ImgHeight_Thumb = 0;
+            string strNewFileName = string.Empty;
+            string strPathToSave = string.Empty;
+            string strFileImg = objEntities.SafeString(fuImg.PostedFile.FileName);
+            long FileSize = fuImg.PostedFile.ContentLength;
+            if ((FileSize != 0) && (FileSize <= 500000))
+            {
+                string Ext = this.fuImg.PostedFile.ContentType;
+                if (Ext == "image/pjpeg")
+                {
+                    strDateTime = this.objEntities.FullTime();
+                    if (strFileImg != string.Empty)
+                    {
+                        this.fuImg.PostedFile.SaveAs(HttpContext.Current.Server.MapPath("//") + objEntities.GetVirtualPathLibraryImage() + strDateTime + ".jpg");
+                        strPathToSave = HttpContext.Current.Server.MapPath("//") + objEntities.GetVirtualPathLibraryImage();
+                        MaxWidth = objEntities.GetMaxWidthImages();
+                        WidthToResize = objEntities.GetWidthToResizeProduct();
+                        Flag_Upload = objEntities.UploadImg(strDateTime, strPathToSave, WidthToResize, MaxWidth);
+                        if (Flag_Upload)
+                        {
+                            System.Drawing.Image objImg = System.Drawing.Image.FromFile(HttpContext.Current.Server.MapPath("//") + objEntities.GetVirtualPathLibraryImage() + strDateTime + ".jpg");
+                            ImgWidth = objImg.Width;
+                            ImgHieght = objImg.Height;
+                            System.Drawing.Image objImg_Thumb = System.Drawing.Image.FromFile(HttpContext.Current.Server.MapPath("//") + objEntities.GetVirtualPathLibraryImage() + strDateTime + "_T.jpg");
+                            ImgHeight_Thumb = objImg_Thumb.Height;
+                        }
+                    }
+
+                    if (Flag_Upload)
+                    {
+                        //Ghi vao database
+                        SqlCommand comm = new SqlCommand("Insert_LibraryImage_Product", this.objConn.SqlConn());
+                        comm.CommandType = CommandType.StoredProcedure;
+                        comm.Parameters.AddWithValue("@PhotoID", strDateTime);
+                        comm.Parameters.AddWithValue("@Thumb_W", WidthToResize);
+                        comm.Parameters.AddWithValue("@Thumb_H", ImgHeight_Thumb);
+                        comm.Parameters.AddWithValue("@Full_Size", FileSize);
+                        comm.Parameters.AddWithValue("@Full_W", ImgWidth);
+                        comm.Parameters.AddWithValue("@Full_H", ImgHieght);
+                        try
+                        {
+                            comm.Connection.Open();
+                            if (comm.ExecuteNonQuery() == -1)
+                                this.objConn.WriteActionLog(strFunctionName, Session["AdminID"].ToString(), strDateTime);
+                        }
+                        catch (Exception ex)
+                        {
+                            throw new Exception(ex.Message.ToString());
+                        }
+                        finally
+                        {
+                            comm.Connection.Close();
+                            comm.Connection.Dispose();
+                            GetLibraryImages();
+                        }
+                    }
+                    else
+                        Response.Write("<script language='JavaScript'>alert('" + Lang["Error_ImgUpload"].ToString() + WidthToResize + Lang["to"].ToString() + MaxWidth + Lang["pixels"].ToString() + "');history.go(-1);</script>");
+                }
+            }
+            else
+                Response.Write("<script language='JavaScript'>alert('" + Lang["Error_SizeImage"].ToString() + "');history.go(-1);</script>");
+        }
+        #endregion
+        #region Delete Library Product
+        protected void LibraryImage_Delete_Click(object sender, EventArgs e)
+        {
+            if (Session["AdminID"] == null)
+            {
+                Response.Write("<script language='javascript'>alert('Bạn phải đăng nhập / You must login');location.href='Login.aspx?ReturnUrl=Default.aspx';</script>");
+            }
+            else
+            {
+                if (objBusinessLogic.Permission(this.strAllowFunctions) == true)
+                {
+                    this.DeleteLibraryImage();
+                }
+                else
+                {
+                    Response.Redirect("EOFPermission.aspx");
+                }
+            }
+        }
+        protected void DeleteLibraryImage()
+        {
+            foreach (string item in HttpContext.Current.Request.Form)
+            {
+                if (item.Length > 9)
+                {
+                    if (item.Substring(0, 9) == "chbDelete")
+                    {
+                        int intID = int.Parse(item.Substring(9, item.Length - 9));
+                        //=============Delete file=====================================
+                        string SQL = "SELECT PhotoID FROM TB_Product_Images WHERE Id =" + intID;
+                        SqlDataReader drd;
+                        SqlCommand comm_drd = new SqlCommand(SQL, this.objConn.SqlConn());
+                        comm_drd.Connection.Open();
+                        drd = comm_drd.ExecuteReader(CommandBehavior.CloseConnection);
+                        if (drd.Read())
+                        {
+                            string strPhotoID = drd["PhotoID"].ToString() + ".jpg";
+                            string strPhotoID_T = drd["PhotoID"].ToString() + "_T.jpg";
+                            string strCheckImg = drd["PhotoID"].ToString() + ".jpg";
+                            if (strPhotoID != string.Empty)
+                            {
+                                string strPathPhotoID = HttpContext.Current.Server.MapPath("//") + objEntities.GetVirtualPathLibraryImage() + strPhotoID;
+                                string strPathPhotoID_T = HttpContext.Current.Server.MapPath("//") + objEntities.GetVirtualPathLibraryImage() + strPhotoID_T;
+                                string strCheckPath = HttpContext.Current.Server.MapPath("//") + objEntities.GetVirtualPathLibraryImage() + strCheckImg;
+                                if (File.Exists(strCheckPath) == true)
+                                {
+                                    objEntities.Delete_Files(strPathPhotoID);
+                                    objEntities.Delete_Files(strPathPhotoID_T);
+                                }
+                            }
+                        }
+                        drd.Close();
+                        drd.Dispose();
+                        comm_drd.Connection.Close();
+                        comm_drd.Connection.Dispose();
+                        //===========Edn Delete file===================================
+                        //===========Delete Database===================================
+                        SqlCommand comm = new SqlCommand("Delete_Product_Image", this.objConn.SqlConn());
+                        comm.CommandType = CommandType.StoredProcedure;
+                        comm.Parameters.AddWithValue("@ID", intID);
+                        try
+                        {
+                            comm.Connection.Open();
+                            comm.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            throw new Exception(ex.Message.ToString());
+                        }
+                        finally
+                        {
+                            comm.Connection.Close();
+                            comm.Connection.Dispose();
+                        }
+                        this.objConn.WriteActionLog(this.strFunctionName, Session["AdminID"].ToString(), string.Empty);
+                        //===========End Delete Database===============================
+                    }
+                }
+            }
+            GetLibraryImages();
+        }
+        #endregion
+        #region Listing Product category
+        protected string wrProductCatRoot(int intLang)
+        {
+            StringBuilder tbl = new StringBuilder();
+            DataTable dt = new DataTable();
+            SqlDataAdapter adt = new SqlDataAdapter();
+            SqlCommand comm = new SqlCommand("Get_Root_ProductCat_Language", objConn.SqlConn());
+            comm.CommandType = CommandType.StoredProcedure;
+            comm.Parameters.AddWithValue("@Language_Id", intLang);
+            comm.Connection.Open();
+            adt.SelectCommand = comm;
+            adt.Fill(dt);
+
+            string varSpace = string.Empty;
+            tbl.Append("            <select name='SCat_Id' size='1'>");
+            tbl.Append("                <option value=''>[" + Lang["ProductCatChoice"].ToString() + "]</option>");
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                if (int.Parse(dt.Rows[i]["Parent"].ToString()) == 0)
+                {
+                    string strCatName = dt.Rows[i]["SubName"].ToString();
+                    int Cat_Id = int.Parse(dt.Rows[i]["SubCatID"].ToString());
+                    string strSelected = string.Empty;
+                    tbl.Append("        <option value='" + Cat_Id + "'>" + strCatName + "</option>");
+                    if (objBusinessLogic.FindChildNode(Cat_Id, dt))
+                    {
+                        varSpace = "";
+                        tbl.Append(objBusinessLogic.Create_Select_Tree(Cat_Id, dt, 0, varSpace));
+                    }
+                }
+            }
+            tbl.Append("            </select>");
+
+            return tbl.ToString();
+        }
+        #endregion
+        #region Select category
+        protected void CatRoot_SelectIndexChanged(object sender, EventArgs e)
+        {
+            if (this.DDL_Language.SelectedItem.Value.ToString() == "")
+            {
+                CMSProduct_Cat_Root.Visible = false;
+            }
+            else
+            {
+                CMSProduct_Cat_Root.Visible = true;
+                CMSProduct_Cat_Root.InnerHtml = wrProductCatRoot(int.Parse(DDL_Language.SelectedValue));
+            }
+        }
+        #endregion
+        #region Product addnew
+        protected void Product_AddNew_Click(object sender, EventArgs e)
+        {
+            if (Session["AdminID"] == null)
+            {
+                Response.Write("<script language='javascript'>alert('Bạn phải đăng nhập / You must login');location.href='Login.aspx?ReturnUrl=Default.aspx';</script>");
+            }
+            else
+            {
+                if (objBusinessLogic.Permission(this.strAllowFunctions) == true)
+                {
+                    InsertProduct();
+                }
+                else
+                {
+                    Response.Redirect("EOFPermission.aspx");
+                }
+            }
+        }
+        protected void InsertProduct()
+        {
+            string strCheckCode = string.Empty;
+            int intProductImage;
+            int intCat_Id;
+            double dTextCashby;
+            int intIsLeaf = 0;
+            bool boolHost = false;
+            bool boolHomePage = false;
+            int intLanguage_Id = int.Parse(objEntities.SafeString(this.DDL_Language.SelectedValue));
+
+
+           // int intProvider_id = int.Parse(objEntities.SafeString(this.DDL_Provider.SelectedValue));
+            //int intProvider_id = int.Parse(objEntities.SafeString(this.DDL_Provider.SelectedValue));
+            string strSubject = this.txtSubject.Text;
+            string strProductname = this.Brief.Text;
+            string strTextintro = this.Textintro.Text;
+            int intCasby = Convert.ToInt16(DDCashby.SelectedValue.ToString());
+           // int intQuatity = Convert.ToInt32(this.Text_Quatity.Text);
+            if (TextCashby.Text.ToString() != String.Empty)
+            {
+                dTextCashby = Convert.ToDouble(TextCashby.Text.ToString());
+            }
+            else
+            {
+                dTextCashby = 0;
+            }
+            if (Request.Form["LeadImage"].ToString() != null && Request.Form["LeadImage"].ToString() != "")
+            {
+                intProductImage = int.Parse(objEntities.SafeString(Request.Form["LeadImage"].ToString()));
+            }
+            else
+                intProductImage = 0;
+            if (Request.Form["SCat_Id"].ToString() != null && Request.Form["SCat_Id"].ToString() != "")
+            {
+                intCat_Id = int.Parse(objEntities.SafeString(Request.Form["SCat_Id"].ToString()));
+            }
+            else
+                intCat_Id = 0;
+            int intStatus = int.Parse(objEntities.SafeString(this.DDL_Status.SelectedValue));
+           // int intProvider = int.Parse(objEntities.SafeString(this.DDL_Provider.SelectedValue));
+            if (this.cbProductHot.Checked)
+                boolHost = true;
+            if (this.cbProductOnHomePage.Checked)
+                boolHomePage = true;
+            string strContent = objEntities.SafeString(this.Content.Value);
+
+            //================Check Code product==========================
+            if (strSubject != string.Empty)
+            {
+                string SQL_Cat = "SELECT Product_ID FROM TB_Product WHERE Product_ID ='" + strSubject + "'";
+                SqlDataReader drd_;
+                SqlCommand comm_drd = new SqlCommand(SQL_Cat, objConn.SqlConn());
+                comm_drd.CommandType = CommandType.Text;
+                comm_drd.Connection.Open();
+                drd_ = comm_drd.ExecuteReader();
+                if (drd_.Read())
+                {
+                    strCheckCode = drd_["Product_ID"].ToString();
+                }
+                drd_.Close();
+                comm_drd.Connection.Close();
+                comm_drd.Connection.Dispose();
+            }
+            if (strCheckCode != string.Empty)
+            {
+                Response.Write("<script language='JavaScript'>alert('" + Lang["Error_ChoiceCode"].ToString() + "');history.go(-1);</script>");
+                //this.Page_Load();
+                Response.End();
+            }
+
+            //==============End Check Code product========================
+
+            //================Check Cat_Id==========================
+            if (intCat_Id != 0)
+            {
+                string SQL_Cat = "SELECT Parent FROM TB_SubCategory WHERE Parent =" + intCat_Id;
+                SqlDataReader drd;
+                SqlCommand comm_drd = new SqlCommand(SQL_Cat, objConn.SqlConn());
+                comm_drd.CommandType = CommandType.Text;
+                comm_drd.Connection.Open();
+                drd = comm_drd.ExecuteReader();
+                if (drd.Read())
+                {
+                    intIsLeaf = Convert.ToInt16(drd["Parent"].ToString());
+                }
+                drd.Close();
+                comm_drd.Connection.Close();
+                comm_drd.Connection.Dispose();
+            }
+            if (intIsLeaf != 0)
+            {
+                Response.Write("<script language='JavaScript'>alert('" + Lang["Error_ChoiceCatId"].ToString() + "');history.go(-1);</script>");
+                Response.End();
+            }
+
+            //==============End Check Cat_Id========================
+            SqlCommand comm = new SqlCommand("Insert_Product", objConn.SqlConn());
+            comm.CommandType = CommandType.StoredProcedure;
+            comm.Parameters.AddWithValue("@Product_ID", strSubject);
+            comm.Parameters.AddWithValue("@Product_Name", strProductname);
+            comm.Parameters.AddWithValue("@Product_Intro", strTextintro);
+            comm.Parameters.AddWithValue("@SubCatID", intCat_Id);
+            comm.Parameters.AddWithValue("@Language_ID", intLanguage_Id);
+            comm.Parameters.AddWithValue("@Status_ID", intStatus);
+            //comm.Parameters.AddWithValue("@Provider_ID", intProvider);
+            comm.Parameters.AddWithValue("@Product_Price", dTextCashby);
+           // comm.Parameters.AddWithValue("@Product_Quatity", intQuatity);
+            comm.Parameters.AddWithValue("@Cashby", intCasby);
+            comm.Parameters.AddWithValue("@HotProduct", (bool)boolHost);
+            comm.Parameters.AddWithValue("@OnHomePage", (bool)boolHomePage);
+            comm.Parameters.AddWithValue("@Author", Session["AdminID"].ToString());
+            comm.Parameters.AddWithValue("@Content", strContent);
+            comm.Parameters.AddWithValue("@LeadImage", intProductImage);
+            
+
+            try
+            {
+                comm.Connection.Open();
+                if (comm.ExecuteNonQuery() == -1)
+                {
+                    this.objConn.WriteActionLog(strFunctionName, Session["AdminID"].ToString(), strSubject);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message.ToString());
+            }
+            finally
+            {
+                comm.Connection.Close();
+                comm.Connection.Dispose();
+                Response.Redirect("Product_List.aspx");
+            }
+        }
+        #endregion
+        //protected void ShowProvider()
+        //{
+        //    DataTable tableProvider = new DataTable();
+        //    tableProvider = objBusinessLogic.CreateDataTable("Get_Root_HangSX");
+        //    this.DDL_Provider.Items.Add(new ListItem(this.Lang["HangChoice"].ToString(), ""));
+        //    for (int i = 0; i < tableProvider.Rows.Count; i++)
+        //    {
+        //        this.DDL_Provider.Items.Add(new ListItem(tableProvider.Rows[i]["Name"].ToString(), tableProvider.Rows[i]["HangID"].ToString()));
+        //    }
+        //}
+        protected void DDL_Provider_SelectIndexChanged(object sender, EventArgs e)
+        {
+            //if (this.DDL_Provider.SelectedItem.Value.ToString() == "")
+            //{
+            //    Provider_Root.Visible = false;
+            //}
+            //else
+            //{
+            //    Provider_Root.Visible = true;
+            //    Provider_Root.InnerHtml = ProviderRoot(int.Parse(DDL_Provider.SelectedValue));
+            //}
+        }
+    }
+}

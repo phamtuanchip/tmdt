@@ -1,0 +1,10 @@
+c:\users\tieppb\documents\visual studio 2010\Projects\WebComputer\Entity\obj\Debug\ResolveAssemblyReference.cache
+c:\users\tieppb\documents\visual studio 2010\Projects\WebComputer\Entity\bin\Debug\Entity.dll
+c:\users\tieppb\documents\visual studio 2010\Projects\WebComputer\Entity\bin\Debug\Entity.pdb
+c:\users\tieppb\documents\visual studio 2010\Projects\WebComputer\Entity\obj\Debug\Entity.dll
+c:\users\tieppb\documents\visual studio 2010\Projects\WebComputer\Entity\obj\Debug\Entity.pdb
+F:\data center\Topica\Project thuc tap\WebComputer\Entity\bin\Debug\Entity.dll
+F:\data center\Topica\Project thuc tap\WebComputer\Entity\bin\Debug\Entity.pdb
+F:\data center\Topica\Project thuc tap\WebComputer\Entity\obj\Debug\ResolveAssemblyReference.cache
+F:\data center\Topica\Project thuc tap\WebComputer\Entity\obj\Debug\Entity.dll
+F:\data center\Topica\Project thuc tap\WebComputer\Entity\obj\Debug\Entity.pdb

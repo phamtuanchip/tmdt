@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Languages>
+  <Left_Manager>   
+    <SystemManager>Quản trị hệ thống</SystemManager>
+    <GroupList>Quản trị nhóm thành viên</GroupList>
+    <MemberGroupAddNew>Thêm mới nhóm thành viên</MemberGroupAddNew>
+    <AdminUserAddNew>Thêm mới thành viên</AdminUserAddNew>
+    <YourAccount>Tài khoản cá nhân</YourAccount>
+    <ActionLogAction>Nhật ký hành động</ActionLogAction>
+    <ActionLogLogin>Nhật ký đăng nhập</ActionLogLogin>
+    <MemberList>Danh sách thành viên</MemberList>
+	<ManagerProduct>Quản lý sản phẩm</ManagerProduct>
+    <CategoryProduct>Danh sách loại sản phẩm</CategoryProduct>
+	<SubCategoryList>Danh sách nhóm sản phẩm</SubCategoryList>
+    <AddNewCategory>Thêm mới loại sản phẩm</AddNewCategory>
+    <ListProducts>Danh sách sản phẩm</ListProducts>
+    <AddNewProduct>Thêm mới sản phẩm</AddNewProduct>
+    <Customer_List>Danh sách khách hàng</Customer_List>
+	  <Provider_List>Danh sách nhà cung cấp</Provider_List>
+	  <Provider_Deft>Bảng công nợ nhà cung cấp</Provider_Deft>
+    <PaymentOrder>Danh sách phiếu chi</PaymentOrder>
+	  <OrderManager>Quản lý hóa đơn</OrderManager>
+	  <ListBill>Danh sách hóa đơn</ListBill>
+    <ListOrderCustomer>Danh sách hóa đơn xuất</ListOrderCustomer>
+	  <ListOrder>Danh sách đơn đặt hàng</ListOrder>
+    <ListOrderIn>Danh sách hóa đơn nhập</ListOrderIn>
+	  <ManagerReport>Quản lý báo cáo</ManagerReport>
+	  <StaticalProduct>Thống kê sản phẩm</StaticalProduct>
+	  <StaticalOrder>Thống kê hóa đơn</StaticalOrder>
+	  <StaticalProvider>Thống kê nhà cung cấp</StaticalProvider>
+	  <StaticalProductMany>Thống kê sản phẩm bán chạy</StaticalProductMany>
+	  <StaticalCustomer>Thống kê khách hàng</StaticalCustomer>
+	  <StaticalforMonth>Thống kê theo quý</StaticalforMonth>
+	  <StaticalOther>Thống kê khác</StaticalOther>
+    <AdminNewsManager>Quản lý tin tức</AdminNewsManager>
+    <AdminNewsCategoryManager>Quản lý danh mục tin tức</AdminNewsCategoryManager>
+    <AdminAddNew>Thêm mới tin tức</AdminAddNew>
+    <AdminLibraryImages>Thư viện ảnh</AdminLibraryImages>
+	  <AdminLibraryImagerList>Quản lý thư viện ảnh</AdminLibraryImagerList>
+	  <ListLibararyImages_id>Danh mục thư viện ảnh</ListLibararyImages_id>
+	  <LibararyImages_id>Thư viện ảnh</LibararyImages_id>
+	  <AdminLibraryCatImages>Danh mục thư viện ảnh</AdminLibraryCatImages>
+    <LogoBanner>Quản lý logo, banner</LogoBanner>
+    <CategoryLogo>Quản lý danh mục logo</CategoryLogo>
+    <AddNewLogo>Thêm mới logo</AddNewLogo>
+    <LogoManager>Quản lý logo</LogoManager>
+    <CategoryBanner>Quản lý danh mục banner</CategoryBanner>
+    <AddNewBanner>Thêm mới banner</AddNewBanner>
+    <BannerManager>Quản lý banner</BannerManager>
+    <OtherManager>Các chức năng khác</OtherManager>
+    <IntroduceManager>Giới thiệu</IntroduceManager>
+    <RecruitManager>Quản lý tuyển dụng</RecruitManager>
+    <IntroductionManager>Quản lý giới thiệu</IntroductionManager>
+    <CategoryIntroduction>Danh mục giới thiệu</CategoryIntroduction>
+    <CatAddNewIntroduction>Thêm mới danh mục giới thiệu</CatAddNewIntroduction>
+    <AddNewDocument>Thêm mới giới thiệu</AddNewDocument>
+    <FAQsManager>Quản lý FAQ</FAQsManager>
+    <FAQsAddNew>Thêm mới FAQ</FAQsAddNew>
+	  <GalleryManager>Quản lý danh mục ảnh</GalleryManager>
+	  <CatGallery>Danh mục Gallery</CatGallery>
+	  <CatGalleryAdd>Thêm mới danh mục ảnh</CatGalleryAdd>
+	  <GalleryList>Danh sách ảnh</GalleryList>
+	  <GalleryAdd>Thêm mới ảnh</GalleryAdd>
+ 
+    
+  </Left_Manager>
+  <Default_Manager>
+    <WebsiteManagerSys>CHƯƠNG TRÌNH QUẢN LÝ WEBSITE BÁN LINK KIỆN MÁY TÍNH WEBCOMPUTER</WebsiteManagerSys>
+    <AppNameInside>CMS - CONTENT MANAGEMENT SYSTEM - HỆ QUẢN TRỊ NỘI DUNG</AppNameInside>
+    <CopyRight>Phát triển bởi Anh Tiep Học viện iNEt - NIIT Ha Noi</CopyRight>
+    <TelFax>Tel :0936368366  - Fax :03213 713 310  - www.chienyen.com.vn</TelFax>
+  </Default_Manager>
+  <Login_Manager>
+    <LoginSystem>Đăng nhập hệ thống quản trị website</LoginSystem>
+    <UserName>Tên đăng nhập</UserName>
+    <Password>Mật khẩu</Password>
+  </Login_Manager>
+  <Error>
+    <Note>Thông báo</Note>
+    <NotPermisstion>Bạn không có quyền truy cập trang này. Hãy liên hệ với người quản trị.</NotPermisstion>
+  </Error>
+  <MemberGroup_Manager>
+    <GroupInfo>Thông tin nhóm thành viên</GroupInfo>
+    <MemberGroupManager>Quản trị nhóm thành viên</MemberGroupManager>
+    <AddMemberGroup>Thêm mới nhóm thành viên</AddMemberGroup>
+    <GroupName>Tên nhóm</GroupName>
+    <Description>Mô tả</Description>
+    <Comment>Ghi chú</Comment>
+    <Active>Hoạt động</Active>
+    <UnActive>Không hoạt động</UnActive>
+    <Status>Tình trạng</Status>
+    <PermisionForGroup>Phân quyền cho nhóm thành viên</PermisionForGroup>
+    <NameGroup>Nhóm quyền</NameGroup>
+    <No>Stt</No>
+    <AddNew>Thêm mới</AddNew>
+    <Return>Quay lại</Return>
+    <edit> Sửa </edit>
+    <delete> Xoá </delete>
+    <reset>Huỷ bỏ</reset>
+    <check_all>Đánh dấu hết</check_all>
+  </MemberGroup_Manager>
+  <Member_Manager>
+    <MemberList>Danh sách thành viên</MemberList>
+    <ListCategory>Danh sách loại sản phẩm</ListCategory>
+    <AddNewMember>Thêm mới thành viên</AddNewMember>
+    <EditMember>Sửa thông tin thành viên</EditMember>
+    <UserName>Tài khoản</UserName>
+    <CatName>Tên loại sản phẩm</CatName>
+    <CatDes>Chi tiết loại</CatDes>
+    <CategoryID>Mã loại</CategoryID>
+    <CatStatus>Trạng thái</CatStatus>
+    <GroupName>Nhóm thành viên</GroupName>
+    <Password>Mật khẩu</Password>
+    <RePassword>Nhập lại mật khẩu</RePassword>
+    <OtherInfo>Các thông tin khác</OtherInfo>
+    <FullName>Họ và tên</FullName>
+    <Address>Địa chỉ</Address>
+    <Sex>Giới tính</Sex>
+    <Company>Công ty</Company>
+    <Email>Email</Email>
+    <Tel>Điện thoại</Tel>
+    <Mobile>Di động</Mobile>
+    <Fax>Fax</Fax>
+    <CreateDate>Ngày tạo</CreateDate>
+    <Position>Vị trí</Position>
+    <Status>Tình trạng</Status>
+    <Active>Hoạt động</Active>
+    <UnActive>Không hoạt động</UnActive>
+    <No>Stt</No>
+    <AddNew>Thêm mới</AddNew>
+    <Return>Quay lại</Return>
+    <edit> Sửa </edit>
+    <delete> Xoá </delete>
+    <reset>Huỷ bỏ</reset>
+    <check_all>Đánh dấu hết</check_all>
+    <ChangPass>Đổi mật khẩu</ChangPass>
+    <ChangePass>Đổi mật khẩu</ChangePass>
+    <OldPass>Mật khẩu cũ</OldPass>
+    <NewPass>Mật khẩu mới</NewPass>
+    <Close> Đóng </Close>
+    <Save> Lưu </Save>
+    <NotExits>Không tồn tại tài khoản này trong cơ sở dữ liệu</NotExits>
+    <OldPassNotMatch>Mật khẩu cũ bạn nhập vào không đúng.</OldPassNotMatch>
+    <ReTypeNewPass>Nhập lại mật khẩu mới</ReTypeNewPass>
+    <SearchInfo>Thông tin tìm kiếm</SearchInfo>
+    <Search>Tìm kiếm</Search>
+  </Member_Manager>
+  <ActionLog_Manager>
+    <ActionLogAction>Nhật ký hành động</ActionLogAction>
+    <No>Stt</No>
+    <SearchInfo>Thông tin tìm kiếm</SearchInfo>
+    <UserName>Tài khoản</UserName>
+    <IpAddRess>Địa chỉ IP</IpAddRess>
+    <Action>Hành động</Action>
+    <ActionLogLogin>Nhật ký đăng nhập</ActionLogLogin>
+    <LoginDate>Ngày đăng nhập</LoginDate>
+    <FromDate>Từ ngày</FromDate>
+    <ToDate>Đến ngày</ToDate>
+    <Status>Trạng thái</Status>
+    <Complete>Thành công</Complete>
+    <UnComplete>Không thành công</UnComplete>
+    <AddNew>Thêm mới</AddNew>
+    <Return>Quay lại</Return>
+    <edit> Sửa </edit>
+    <delete> Xoá </delete>
+    <reset>Huỷ bỏ</reset>
+    <check_all>Đánh dấu hết</check_all>
+    <detail>Chi tiết hành động</detail>
+    <Search>Tìm kiếm</Search>
+    <DeleteActionLog>Xóa nhật ký hành động</DeleteActionLog>
+    <DeleteActionLogin>Xóa nhật ký đăng nhập</DeleteActionLogin>
+    <ActionDelete>Tùy chọn xóa</ActionDelete>
+    <Close> Đóng </Close>
+  </ActionLog_Manager>
+  <Product_Manager>
+	  <Categroy_Pro_List>Danh sách loại sản phẩm</Categroy_Pro_List>
+	  <Text_Order> Stt </Text_Order>
+	  <Category_Pro_AddNew>Thêm mới</Category_Pro_AddNew>
+	  <Cat_Pro_Group_AddNew>Thêm mới</Cat_Pro_Group_AddNew>
+	  <Category_Pro_Delete>Xóa</Category_Pro_Delete>
+	  <Cat_Pro_Group_Delete>Xóa</Cat_Pro_Group_Delete>
+	  <Product_Des>Mô tả sản phẩm</Product_Des>
+	  <LanguageName>Ngôn ngữ</LanguageName>
+	  <Cat_Pro_Group_List>Danh sách nhóm sản phẩm</Cat_Pro_Group_List>
+    <Liveshowimages>Tạo Live show ảnh</Liveshowimages>
+    <CatProductManager>Quản lý danh mục sản phẩm</CatProductManager>
+	  <CatProAddNew>Thêm mới loại sản phẩm</CatProAddNew>
+	  <CatProName>Tên loại sản phẩm</CatProName>
+    <groupProname>Tên nhóm sản phẩm</groupProname>
+	  <CatProNameLis>Danh sách loại sản phẩm</CatProNameLis>
+    <groupProName>Danh sách nhóm sản phẩm</groupProName>
+	  <CatProDes>Mô tả chi tiết loại sản phẩm</CatProDes>
+    <CatProductAddNew>Thêm mới danh mục sản phẩm</CatProductAddNew>
+    <ProductAddNew>Thêm mới sản phẩm</ProductAddNew>
+    <ProductEdit>Sửa sản phẩm</ProductEdit>
+    <CatProductEdit>Sửa danh mục sản phẩm</CatProductEdit>
+    <CatProEdit>Sửa thông tin loại sản phẩm</CatProEdit>
+    <GroupProEdit>Sửa thông tin nhóm sản phẩm</GroupProEdit>
+    <ProductCatOrderManager>Thiết lập thứ tự danh mục sản phẩm</ProductCatOrderManager>
+    <ProductListManager>Quản lý sản phẩm</ProductListManager>
+	  <ProductReport>Thống kê sản phẩm</ProductReport>
+    <ProductView>Thông tin sản phẩm chi tiết</ProductView>
+    <No>Stt</No>
+	  <Product_Quatity>Số lượng</Product_Quatity>
+	  <StartDate>Ngày bắt đầu</StartDate>
+    <DateImport>Ngày nhập</DateImport>
+	  <EndDate>Ngày kết thúc</EndDate>
+    <TitleSubject>Tiêu đề</TitleSubject>
+    <CategoryName>Danh mục</CategoryName>
+	  <Cat_Pro_Group_Name>Tên nhóm sản phẩm</Cat_Pro_Group_Name>
+	  <Cat_Pro_Name>Tên loại sản phẩm</Cat_Pro_Name>
+	  <CategoryDes>Chi tiết</CategoryDes>
+	  <Cat_Pro_Group_Des>Chi tiết</Cat_Pro_Group_Des>
+    <CatName>Tên danh mục</CatName>
+    <Product_Code>Mã sản phẩm</Product_Code>
+    <Product_Name>Tên sản phẩm</Product_Name>
+    <Product_Price>Giá sản phẩm</Product_Price>
+    <Cashby>Đơn vị tính</Cashby>
+    <ProductCatOrder>Thiết lập thứ tự</ProductCatOrder>
+    <ProductImage>Ảnh</ProductImage>
+    <Content>Mô tả sản phẩm</Content>
+    <Author>Tác giả</Author>
+    <CreatedDate>Ngày nhập</CreatedDate>
+	  <CreateDateImport>Ngày nhập</CreateDateImport>
+    <SelectStatus>Chọn tình trạng</SelectStatus>
+    <ChoiceImage>Chọn ảnh sản phẩm</ChoiceImage>
+    <ProductCatChoice>Chọn danh mục sản phẩm</ProductCatChoice>
+    <ProductCatRelateChoice>Chọn danh mục tin liên quan</ProductCatRelateChoice>
+    <SelectedRelateNews> [ Tin liên quan được chọn ]</SelectedRelateNews>
+    <CheckLeadImage>Hiển thị ảnh trong nội dung tin</CheckLeadImage>
+    <OtherInfo>Thông tin khác</OtherInfo>
+    <HostProduct>Sản phẩm mới</HostProduct>
+    <SearchInfo>Thông tin tìm kiếm</SearchInfo>
+    <Search>Tìm kiếm</Search>
+    <FromDate>Từ ngày</FromDate>
+	  <Product_Intro>Giới thiệu thông tin sản phẩm</Product_Intro>
+    <ToDate>Đến ngày</ToDate>
+    <Status>Trạng thái</Status>
+    <Active>Hoạt động</Active>
+	<CreateDate>Ngày cập nhật</CreateDate>
+    <UnActive>Không hoạt động</UnActive>
+    <Language>Ngôn ngữ</Language>
+    <AddNew>Thêm mới</AddNew>
+    <Return>Quay lại</Return>
+    <edit> Sửa </edit>
+    <delete> Xoá </delete>
+    <reset>Huỷ bỏ</reset>
+    <OnHomePage>Hiển thị trang chủ</OnHomePage>
+    <check_all>Đánh dấu hết</check_all>
+    <var_Text_ParentCat>Danh mục gốc</var_Text_ParentCat>
+    <EOFParent>Bạn không thể chọn danh mục gốc là danh mục đang sửa!</EOFParent>
+    <Error_ChoiceCatId>Bạn chọn danh mục sản phẩm không hợp lệ!</Error_ChoiceCatId>
+    <Error_ChoiceCode>Mã sản phẩm này đã tồn tại!</Error_ChoiceCode>
+    <Error_ImgUpload>Độ rộng của ảnh cần upload phải nằm trong khoảng từ: </Error_ImgUpload>
+    <pixels> pixels</pixels>
+	  <Provider>Nhà cung cấp</Provider>
+    <HangSX>Hãng sản xuất</HangSX>
+	  <Provider_Detail>Hãng sản xuất</Provider_Detail>
+	  <ProviderChoice>Chọn nhà cung cấp</ProviderChoice>
+    <HangChoice>Chọn hãng sản xuất</HangChoice>
+	  <ProviderChoicedetail>Chọn hãng sản xuất</ProviderChoicedetail>
+
+  </Product_Manager>
+  <BillManager>
+	  <TypeBillSave>Hóa đơn nhập</TypeBillSave>
+	  <EmployeeName>Tên nhân viên</EmployeeName>
+	  <TypeBillOut>Hóa đơn xuất</TypeBillOut>
+	  <ProviderName>Tên nhà cung cấp</ProviderName>
+	  <DateInput>Ngày</DateInput>
+	  <ContentBillSave>Thông tin chi tiết hóa đơn nhập</ContentBillSave>
+	  <CategoryProduct>Loại sản phẩm</CategoryProduct>
+	  <ProductName>Tên sản phẩm</ProductName>
+	  <Quatity>Số lượng</Quatity>
+	  <Price>Đơn giá</Price>
+	  <ListProduct>Danh sách sản phẩm</ListProduct>
+	  <TotalMoney>Tổng tiền phải trả</TotalMoney>
+	  <delete>Xóa</delete>
+	  <Add>Thêm mới</Add>
+	  <edit>Sửa</edit>
+	  <Search>Tìm kiếm</Search>
+  </BillManager>
+  <Report_Manager>
+	   <ProductReport>Thống kê sản phẩm</ProductReport>
+	   <No>Stt</No>
+	   <Product_Code>Mã sản phẩm</Product_Code>
+	   <Product_Name>Tên sản phẩm</Product_Name>
+	   <CatProGroupName>Tên loại sản phẩm</CatProGroupName>
+	   <Product_Price>Giá sản phẩm</Product_Price>
+	   <TotalMoney>Thành Tiền</TotalMoney>
+	   <Status>Trạng thái</Status>
+		<Search>Tìm kiếm</Search>
+		<Product_QuatitySale>Số lượng đã bán</Product_QuatitySale>
+  </Report_Manager>	
+  <News_Manager>
+    <CatNewsManager>Quản lý danh mục tin tức</CatNewsManager>
+    <CatNewsAddNew>Thêm mới danh mục tin tức</CatNewsAddNew>
+    <NewsAddNew>Thêm mới tin tức</NewsAddNew>
+    <NewsEdit>Sửa tin tức</NewsEdit>
+    <CatNewsEdit>Sửa danh mục tin tức</CatNewsEdit>
+    <NewsCatOrderManager>Thiết lập thứ tự danh mục tin tức</NewsCatOrderManager>
+    <NewsListManager>Quản lý tin tức</NewsListManager>
+    <NewsView>Thông tin chi tiết tin tức</NewsView>
+    <No>Stt</No>
+    <TitleSubject>Tiêu đề</TitleSubject>
+    <CategoryName>Danh mục</CategoryName>
+    <CatName>Tên danh mục</CatName>
+    <Subject>Tiêu đề tin</Subject>
+    <Brief>Tóm tắt</Brief>
+    <NewsCatOrder>Thiết lập thứ tự</NewsCatOrder>
+    <NewsImage>Ảnh</NewsImage>
+    <Content>Nội dung</Content>
+    <Author>Tác giả</Author>
+    <CreatedDate>Ngày tạo</CreatedDate>
+    <RelateNews>Tin liên quan</RelateNews>
+    <SelectStatus>Chọn tình trạng</SelectStatus>
+    <ChoiceImage>Chọn ảnh tin tức</ChoiceImage>
+    <NewsCatChoice>Chọn danh mục tin tức</NewsCatChoice>
+    <NewsCatRelateChoice>Chọn danh mục tin liên quan</NewsCatRelateChoice>
+    <SelectedRelateNews> [ Tin liên quan được chọn ]</SelectedRelateNews>
+    <CheckLeadImage>Hiển thị ảnh trong nội dung tin</CheckLeadImage>
+    <OtherInfo>Thông tin khác</OtherInfo>
+    <HostNews>Tin nóng</HostNews>
+    <SearchInfo>Thông tin tìm kiếm</SearchInfo>
+    <Search>Tìm kiếm</Search>
+    <FromDate>Từ ngày</FromDate>
+    <ToDate>Đến ngày</ToDate>
+    <Status>Trạng thái</Status>
+    <Active>Hoạt động</Active>
+    <UnActive>Không hoạt động</UnActive>
+    <Language>Ngôn ngữ</Language>
+    <AddNew>Thêm mới</AddNew>
+    <Return>Quay lại</Return>
+    <edit> Sửa </edit>
+    <delete> Xoá </delete>
+    <reset>Huỷ bỏ</reset>
+    <OnHomePage>Hiển thị trang chủ</OnHomePage>
+    <check_all>Đánh dấu hết</check_all>
+    <var_Text_ParentCat>Danh mục gốc</var_Text_ParentCat>
+    <EOFParent>Bạn không thể chọn danh mục gốc là danh mục đang sửa!</EOFParent>
+    <Error_ChoiceCatId>Bạn chọn danh mục tin không hợp lệ!</Error_ChoiceCatId>
+  </News_Manager>
+  <LibraryImages_Manager>
+    <Error_ChoiceCatId>Bạn chọn danh ảnh không hợp lệ!</Error_ChoiceCatId>
+    <NewsCatChoice>Chọn danh mục ảnh</NewsCatChoice>
+    <EOFParent>Bạn không thể chọn danh mục gốc là danh mục đang sửa!</EOFParent>
+    <var_Text_ParentCat>Danh mục gốc</var_Text_ParentCat>
+    <LibraryImages>Thư viện ảnh</LibraryImages>
+    <AdminLibraryCatImages>Danh mục thư viện ảnh</AdminLibraryCatImages>
+    <LibraryCatInfo>Thông tin danh mục</LibraryCatInfo>
+    <LibraryCatImageAddNew>Thêm mới danh mục thư viện ảnh</LibraryCatImageAddNew>
+    <LibraryCatImageEdit>Sửa danh mục thư viện ảnh</LibraryCatImageEdit>
+    <LibraryImageAddNew>Thêm mới ảnh</LibraryImageAddNew>
+    <LibraryImageEdit>Sửa thư viện ảnh</LibraryImageEdit>
+    <LibraryImageView>Thông tin chi tiết ảnh</LibraryImageView>
+    <SearchInfo>Thông tin tìm kiếm</SearchInfo>
+    <Search>Tìm kiếm</Search>
+    <SelectAll>Tất cả</SelectAll>
+    <CatName>Tên danh mục</CatName>
+    <CatImage>Danh mục ảnh</CatImage>
+    <SizeImage>Kích cỡ ảnh: </SizeImage>
+    <WhidthImage>Kích thước ảnh: </WhidthImage>
+    <WhidthResizeImage>Kích thước thu nhỏ: </WhidthResizeImage>
+    <CreateDate>Ngày cập nhật: </CreateDate>
+    <CreatedDate>Ngày cập nhật</CreatedDate>
+    <Desc>Mô tả</Desc>
+    <ImageUpload>Đường dẫn ảnh</ImageUpload>
+    <Language>Ngôn ngữ</Language>
+    <Active>Hoạt động</Active>
+    <add_new>Thêm mới</add_new>
+    <Upload>Upload ảnh</Upload>
+    <reset>Huỷ bỏ</reset>
+    <delete> Xoá </delete>
+    <back>Quay lại</back>
+    <edit> Sửa </edit>
+    <check_all>Đánh dấu hết</check_all>
+    <to> đến </to>
+    <pixels> pixels</pixels>
+    <Error_ImgUpload>Độ rộng của ảnh cần upload phải nằm trong khoảng từ: </Error_ImgUpload>
+    <Error_SizeImage>Bạn chỉ có thể upload ảnh JPG có dung lượng tối đa: 5MB!</Error_SizeImage>
+  </LibraryImages_Manager>
+  <LOGO_Manager>
+    <Text_Order> Stt </Text_Order>
+    <LogoManager>Quản lý logo</LogoManager>
+    <LogoCatAddNew>Thêm mới danh mục logo</LogoCatAddNew>
+    <logoAddNew>Thêm mới logo</logoAddNew>
+    <LogoCatEdit>Sửa thông tin danh mục logo</LogoCatEdit>
+    <LogoCategoryManager>Quản lý danh mục logo</LogoCategoryManager>
+    <Language>Ngôn ngữ</Language>
+    <EOF>Không tìm thấy dữ liệu yêu cầu!</EOF>
+    <CategoryName>Tên danh mục</CategoryName>
+    <URL> URL </URL>
+    <Hidden>Hiển thị</Hidden>
+    <Random>Ngẫu nhiên</Random>
+    <Static>Tuần tự</Static>
+    <edit> Sửa </edit>
+    <check_all>Đánh dấu hết</check_all>
+    <NumberLogo>Số lượng logo trên trang</NumberLogo>
+    <add_new>Thêm mới</add_new>
+    <reset_form>Huỷ bỏ</reset_form>
+    <delete> Xoá </delete>
+    <back>Quay lại</back>
+    <CatName>Tên danh mục</CatName>
+    <Company>Công ty</Company>
+    <logoCatName>Danh mục logo</logoCatName>
+    <URL_Cat>Đường dẫn trang hiển thị</URL_Cat>
+    <LogoNumber>Số lượng logo trên trang</LogoNumber>
+    <LogoDisplay>Hiển thị logo</LogoDisplay>
+    <DisplayRandom>Ngẫu nhiên</DisplayRandom>
+    <DisplayASC>Tuần tự</DisplayASC>
+    <Active>Hoạt động</Active>
+    <unActive>Không hoạt động</unActive>
+    <Status>Trạng thái</Status>
+    <TypeLogo>Kiểu logo quảng cáo</TypeLogo>
+    <TypeLink>Kiểu liên kết</TypeLink>
+    <Location>Vị trí đặt Logo</Location>
+    <LogoName>Tên logo</LogoName>
+    <LogoPath>Đường dẫn logo</LogoPath>
+    <LogoDesc>Mô tả Logo</LogoDesc>
+    <LogoStartDate>Ngày bắt đầu</LogoStartDate>
+    <LogoEndDate>Ngày kết thúc</LogoEndDate>
+    <FileUpload>File upload (độ rộng: 172px)</FileUpload>
+    <UnExpried>Không hết hạn</UnExpried>
+    <Example>Ví dụ: www.fpt.com.vn; www.fpt.com; index.aspx </Example>
+    <Error_TypeImage>Bạn chỉ có thể upload ảnh JPG, GIF!</Error_TypeImage>
+    <Error_SizeImage>Bạn chỉ có thể upload ảnh có dung lượng tối đa: 1MB!</Error_SizeImage>
+    <Logo_View>Thông tin logo</Logo_View>
+    <Edit_Logo>Sửa thông tin logo</Edit_Logo>
+  </LOGO_Manager>
+  <BANNER_Manager>
+    <BannerCatManager>Quản lý danh mục banner</BannerCatManager>
+    <BannerManager>Quản lý banner</BannerManager>
+    <BannerCatAddNew>Thêm mới danh mục banner</BannerCatAddNew>
+    <BannerCatEdit>Sửa thông tin danh mục Banner</BannerCatEdit>
+    <BannerAddNew>Thêm mới banner</BannerAddNew>
+    <Edit_Banner>Sửa thông tin banner</Edit_Banner>
+    <TypeLink>Kiểu liên kết</TypeLink>
+    <BannerName>Tên logo</BannerName>
+    <BannerDesc>Mô tả Logo</BannerDesc>
+    <BannerStartDate>Ngày bắt đầu</BannerStartDate>
+    <BannerEndDate>Ngày kết thúc</BannerEndDate>
+    <FileUpload>File upload</FileUpload>
+    <UnExpried>Không hết hạn</UnExpried>
+    <Example>Ví dụ: www.fpt.com.vn; www.fpt.com; index.aspx </Example>
+    <Error_TypeImage>Bạn chỉ có thể upload ảnh JPG, GIF!</Error_TypeImage>
+    <Error_SizeImage>Bạn chỉ có thể upload ảnh có dung lượng tối đa: 1MB!</Error_SizeImage>
+    <CatName>Tên danh mục</CatName>
+    <BannerPath>Đường dẫn banner</BannerPath>
+    <BannerCatName>Danh mục logo</BannerCatName>
+    <Language>Ngôn ngữ</Language>
+    <Status>Trạng thái</Status>
+    <URL_Cat>Đường dẫn trang hiển thị</URL_Cat>
+    <EOF>Không tìm thấy dữ liệu yêu cầu!</EOF>
+    <CategoryName>Tên danh mục</CategoryName>
+    <URL> URL </URL>
+    <Active>Hoạt động</Active>
+    <unActive>Không hoạt động</unActive>
+    <Text_Order> Stt </Text_Order>
+    <add_new>Thêm mới</add_new>
+    <reset_form>Huỷ bỏ</reset_form>
+    <delete> Xoá </delete>
+    <back>Quay lại</back>
+    <edit> Sửa </edit>
+    <check_all>Đánh dấu hết</check_all>
+    <Error_TypeImage>Bạn chỉ có thể upload ảnh JPG, GIF!</Error_TypeImage>
+    <Error_SizeImage>Bạn chỉ có thể upload ảnh có dung lượng tối đa: 5MB!</Error_SizeImage>
+    <Banner_View>Thông tin banner</Banner_View>
+  </BANNER_Manager>
+  <GalleryManagers>
+	  <CatGallery>Danh mục Gallery</CatGallery>
+	  <CatGalleryAdd>Thêm mới danh mục ảnh</CatGalleryAdd>
+	  <GalleryList>Danh sách ảnh</GalleryList>
+	  <GalleryAdd>Thêm mới ảnh</GalleryAdd>
+  </GalleryManagers>
+  <Provider_Manager>
+	  <ProviderName>Tên nhà cung cấp</ProviderName>
+	  <ProviderAddress>Địa chỉ nhà cung cấp</ProviderAddress>
+	  <ProviderPhone>Điện thoại</ProviderPhone>
+	  <ProviderWebsite>Website</ProviderWebsite>
+	  <DateImport>Ngày nhập</DateImport>
+	  <Active>Hoạt động</Active>
+	  <Status>Trạng thái</Status>
+	  <Prov_Add>Thêm mới</Prov_Add>
+    <Hang_Add>Thêm mới</Hang_Add>
+	  <Prov_Eidt>Sửa thông tin nhà cung cấp</Prov_Eidt>
+	  <Prov_Delete>Xóa</Prov_Delete>
+    <Hang_Delete>Xóa</Hang_Delete>
+	  <Provider_Add>Thêm mới nhà cung cấp</Provider_Add>
+	  <Language>Ngôn ngữ</Language>
+	  <Discription>Thông tin chi tiết</Discription>
+	  <reset>Reset</reset>
+	  <Return>Quay lại</Return>
+	  <edit>Sửa</edit>
+	  
+  </Provider_Manager>
+  <INTRODUCE_Manager>
+    <IntroduceManager>Quản lý giới thiệu</IntroduceManager>
+    <IntroduceAddNew>Thêm mới giới thiệu</IntroduceAddNew>
+    <IntroduceView>Chi tiết thông tin giới thiệu</IntroduceView>
+    <IntroduceEdit>Sửa thông tin giới thiệu</IntroduceEdit>
+    <IntroduceTitle>Tiêu đề</IntroduceTitle>
+    <CompanyName>Công ty</CompanyName>
+    <add_new>Thêm mới</add_new>
+    <Language>Ngôn ngữ</Language>
+    <Content>Nội dung</Content>
+    <Text_Order> Stt </Text_Order>
+    <reset_form>Huỷ bỏ</reset_form>
+    <delete> Xoá </delete>
+    <back>Quay lại</back>
+    <edit> Sửa </edit>
+    <check_all>Đánh dấu hết</check_all>
+    <EOF>Không tìm thấy dữ liệu yêu cầu!</EOF>
+  </INTRODUCE_Manager>
+  <RECRUIT_Manager>
+    <RecruitManager>Quản lý thông tin tuyển dụng</RecruitManager>
+    <RecruitTitle>Tiêu đề</RecruitTitle>
+    <RecruitAddNew>Thêm mới thông tin tuyển dụng</RecruitAddNew>
+    <RecruitView>Chi tiết thông tin tuyển dụng</RecruitView>
+    <RecruitEdit>Sửa thông tin tuyển dụng</RecruitEdit>
+    <CatIntroduce>Danh mục</CatIntroduce>
+    <add_new>Thêm mới</add_new>
+    <Language>Ngôn ngữ</Language>
+    <Text_Order> Stt </Text_Order>
+    <Content>Nội dung</Content>
+    <StartDate>Ngày bắt đầu</StartDate>
+    <EndDate>Ngày kết thúc</EndDate>
+    <CreateDate>Ngày cập nhập</CreateDate>
+    <reset_form>Huỷ bỏ</reset_form>
+    <delete> Xoá </delete>
+    <back>Quay lại</back>
+    <edit> Sửa </edit>
+    <Active>Hoạt động</Active>
+    <unActive>Không hoạt động</unActive>
+    <Status>Trạng thái</Status>
+    <check_all>Đánh dấu hết</check_all>
+    <EOF>Không tìm thấy dữ liệu yêu cầu!</EOF>
+  </RECRUIT_Manager>
+  <News>
+    <OtherNews>Các tin tức khác</OtherNews>
+    <Viewdetail>Xem tiếp</Viewdetail>
+  </News>
+  <Document_Manager>
+    <CatDocumentManager>Quản lý danh mục giới thiệu</CatDocumentManager>
+    <AddNew>Thêm mới</AddNew>
+    <Document_Edit>Sửa thông tin giới thiệu</Document_Edit>
+    <DocumentCatOrder>Sắp xếp thứ tự</DocumentCatOrder>
+    <Return>Quay lại</Return>
+    <reset>Xóa</reset>
+    <var_Text_ParentCat>Danh mục gốc</var_Text_ParentCat>
+    <Language>Ngôn ngữ</Language>
+    <CatName>Tên danh mục</CatName>
+    <CatDocumentAddNew>Thêm mới danh mục giới thiệu</CatDocumentAddNew>
+    <Active>Hoạt động</Active>
+    <OnHomePage>Hiển thị ở trang chủ</OnHomePage>
+    <CatDocumentEdit>Sửa danh mục giới thiệu</CatDocumentEdit>
+    <edit>Sửa</edit>
+    <DocumentAddNew>Thêm mới giới thiệu</DocumentAddNew>
+    <NewsCatChoice>Hãy chọn danh mục</NewsCatChoice>
+  </Document_Manager>
+  <FAQs_Manager>
+	  <FAQsManager>Quản lý FAQ</FAQsManager>
+	  <FAQsAddNew>Thêm mới Faq</FAQsAddNew>
+	  <FAQ_Edit>Sửa Faq</FAQ_Edit>
+	  <FAQsView>Thông tin chi tiết FAQ</FAQsView>
+    <FAQsSearchInfor>Thông tin tìm kiếm</FAQsSearchInfor>
+    <FAQsSearch>Tìm kiếm</FAQsSearch>
+    <FAQsEdit>Sửa FAQ</FAQsEdit>
+    <Text_Order> Stt </Text_Order>
+    <Question>Câu hỏi</Question>
+    <Answer>Trả lời</Answer>
+    <User_id>Người hỏi</User_id>
+    <Email>Địa chỉ email</Email>
+    <Language>Ngôn ngữ</Language>
+    <Text_Author>Tác giả</Text_Author>
+    <VideoActive>Hoạt động</VideoActive>
+    <Text_Status>Trạng thái</Text_Status>
+    <Active>Hoạt động</Active>
+    <unActive>Không hoạt động</unActive>
+    <check_all>Đánh dấu hết</check_all>
+    <add_new>Thêm mới</add_new>
+    <reset_form>Huỷ bỏ</reset_form>
+    <delete> Xoá </delete>
+    <back>Quay lại</back>
+    <edit> Sửa </edit>
+    <content>Nội dung</content>
+    <CreateDate>Ngày gửi</CreateDate>
+    <AnswerDate>Ngày trả lời</AnswerDate>
+    <str_Search>Chuỗi tìm kiếm</str_Search>
+    <rdSearch1>Tìm kiếm theo tiêu đề</rdSearch1>
+    <rdSearch>Tìm kiếm theo tiêu đề và nội dung</rdSearch>
+    <Eof>Không tìm thấy dữ liệu yêu cầu!</Eof>
+    <Note>Thông báo</Note>
+    <NotPermisstion>Bạn không có quyền truy cập trang này. Hãy liên hệ với người quản trị.</NotPermisstion>
+  </FAQs_Manager>
+</Languages>

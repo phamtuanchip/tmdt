@@ -1,0 +1,240 @@
+﻿Body
+{
+	color:#000000;
+	font-size: 11px;
+	font-family:Tahoma;
+}
+.White {
+	COLOR: #ffffff;
+	font-size:small;
+	font-family:Arial;
+}
+.White A:active {
+	COLOR: #ffffff;
+	font-size:small;
+	font-family:Arial;
+}
+.White A:link {
+	COLOR: #ffffff;
+	font-size:small;
+	font-family:Arial;
+}
+.White A:visited {
+	COLOR: #ffffff;
+	font-size:small;
+	font-family:Arial;
+}
+.White A:hover {
+	COLOR: #ffffff;
+	font-size:small;
+	font-family:Arial;
+}
+.GridRow {
+	BACKGROUND-COLOR: #fff
+}
+.GridAltRow {
+	BACKGROUND-COLOR: #eff0f3
+}
+a.leftMenuAdmin, a.nav:visited{
+	color : #000000;
+	text-decoration: none;
+	font-size: 11px;
+	font-weight: normal;
+	font-family: Arial; 
+	padding-left: 3px;
+}
+
+a.leftMenuAdmin:hover, a.nav:visited:hover{
+	color : #000000;
+	text-decoration : underline;
+	font-size: 11px;
+	font-weight: normal;
+}
+A {
+	FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: tahoma; TEXT-DECORATION: none
+}
+INPUT.button {
+	background-color:#FFFFFF;
+	color:#000000;
+	font-family:Verdana;
+	font-size:8pt;
+	font-weight:normal;
+}
+.Title
+{
+	background-color: #FFFFFF;
+	font-family: Verdana;
+	padding-left: 3px;
+	padding-right:3px;
+	height: 23px;
+	color:#000000;
+	font-weight:bold;
+	background-image:url(/Images/admin/projectbox_bkg.gif)
+}
+.SubTitle
+{
+	background-color: #EFF0F3;
+	font-family: Verdana;
+	font-size: 8pt;
+	padding-left: 3px;
+	height: 15px;
+	color:#494A46;	
+}
+.ListContent
+{
+	FONT-SIZE: 8pt;
+	COLOR: #000000;
+	FONT-FAMILY: tahoma;
+	padding-left: 3px;
+}
+INPUT.textbox {
+	background-color:#FFFFFF;
+	color:#000000;
+	font-family:Verdana;
+	font-size:8pt;
+	font-weight:normal;
+	border-top:#000000 0px solid;
+	border-right:#CCCCCC 0px solid;
+	border-bottom:#CCCCCC 1px solid;
+	border-left:#CCCCCC 0px solid;
+}
+a.member_list, a.nav:visited{
+	color : #444444;
+	text-decoration: none;
+	font-size: 8pt;
+	font-weight: normal;
+	font-family: Arial; 
+	padding-left: 10px;
+}
+
+a.member_list:hover, a.nav:visited:hover{
+	color : #999999;
+	text-decoration : underline;
+	font-size: 11px;
+	font-weight: normal;
+}
+.member_title {
+	color : #444444;
+	text-decoration: none;
+	font-size: 8pt;
+	font-weight: bold;
+	font-family: Arial; 
+	height:23px;
+}
+.create_title {
+	color : #444444;
+	text-decoration: none;
+	font-size: 8pt;
+	font-weight: bold;
+	font-family: Arial; 
+	height:25px;
+	padding-left: 10px;
+}
+.Copyright
+{
+	color : #777777;
+	font-size: 12px;
+	font-weight: normal;
+}
+.SpacerTd
+{
+	padding-left:7px;
+	padding-top:5px;	
+}
+SELECT {
+	background-color:#FFFFFF;
+	color:#000000;
+	font-family:Verdana;
+	font-size:8pt;
+}
+.Footer
+{
+	background-color: #FFFFFF;
+	font-family: Verdana;
+	padding-left: 3px;
+	padding-right:3px;
+	height: 23px;
+	color:#000000;
+	background-image:url(/Images/admin/projectbox_bkg.gif)
+}
+.collapsePanel {	
+	background-color:white;
+	overflow:hidden;
+}
+.CatNameGalley
+{
+	background-color: #FFFFFF;
+	font-family: Verdana;
+	padding-left: 3px;
+	padding-right:3px;
+	height: 23px;
+	color:#FFFFFF;
+	font-weight:bold;
+	background-image:url(/Images/admin/projectbox_bkg.gif)
+}
+.style_title
+{
+	font-family: Times New Roman;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #618339;
+}
+.style_datetime
+{
+	font-family: Tahoma;
+	font-size: 8pt;
+	color: #777777;
+}
+/*================================*/
+.style_cat
+{
+	font-family:Times New Roman; 
+	font-size: 16px; 
+	color:#62853A; 
+	font-weight:700;
+}
+.style_time
+{
+	font-family: Tahoma; 
+	font-size: 8pt; 
+	color: #777777;
+}
+.style_subject
+{
+	font-family:Times New Roman; 
+	font-size: 16px; 
+	color:#000000; 
+	font-weight:bold;
+}
+.style_brief
+{
+	font-family: Times New Roman; 
+	font-size: 14px; 
+	color: #5F5F5F; 
+	font-weight:bold;
+}
+.style_content
+{
+	font-family:Times New Roman; 
+	font-size: 14px; 
+	color:#000000;
+}
+.style_author
+{
+	font-family:Times New Roman; 
+	font-size: 14px; 
+	font-weight:bold;
+}
+.style_desc_introduce
+{
+	font-family: Times New Roman; 
+	font-size: 12pt;
+}
+.style_title_introduce
+{
+	font-family:Times New Roman; 
+	font-size: 16px; 
+	color:#62853A; 
+	font-weight:700;
+}
+/*================================*/

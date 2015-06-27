@@ -1,0 +1,14 @@
+c:\users\tieppb\documents\visual studio 2010\Projects\WebComputer\Bussiness\obj\Debug\ResolveAssemblyReference.cache
+c:\users\tieppb\documents\visual studio 2010\Projects\WebComputer\Bussiness\bin\Debug\Bussiness.dll
+c:\users\tieppb\documents\visual studio 2010\Projects\WebComputer\Bussiness\bin\Debug\Bussiness.pdb
+c:\users\tieppb\documents\visual studio 2010\Projects\WebComputer\Bussiness\bin\Debug\Entity.dll
+c:\users\tieppb\documents\visual studio 2010\Projects\WebComputer\Bussiness\bin\Debug\Entity.pdb
+c:\users\tieppb\documents\visual studio 2010\Projects\WebComputer\Bussiness\obj\Debug\Bussiness.dll
+c:\users\tieppb\documents\visual studio 2010\Projects\WebComputer\Bussiness\obj\Debug\Bussiness.pdb
+F:\data center\Topica\Project thuc tap\WebComputer\Bussiness\bin\Debug\Bussiness.dll
+F:\data center\Topica\Project thuc tap\WebComputer\Bussiness\bin\Debug\Bussiness.pdb
+F:\data center\Topica\Project thuc tap\WebComputer\Bussiness\bin\Debug\Entity.dll
+F:\data center\Topica\Project thuc tap\WebComputer\Bussiness\bin\Debug\Entity.pdb
+F:\data center\Topica\Project thuc tap\WebComputer\Bussiness\obj\Debug\ResolveAssemblyReference.cache
+F:\data center\Topica\Project thuc tap\WebComputer\Bussiness\obj\Debug\Bussiness.dll
+F:\data center\Topica\Project thuc tap\WebComputer\Bussiness\obj\Debug\Bussiness.pdb

@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="WebComputer.MasterPage" %>
+<%@ Register Assembly="Microsoft.Web.Atlas" Namespace="Microsoft.Web.UI" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>CMS - CONTENT MANAGEMENT SYSTEM - HỆ QUẢN TRỊ NỘI DUNG</title>
+    <link href="css/StyleSheetAdmin.css" rel="stylesheet" type ="text/css" />
+    <script type="text/javascript" src="/js/Function.js"></script>
+    <script type="text/javascript" src="/js/Calendar.js"></script>
+</head>
+<body style="margin-top: 0; margin-left: 0; margin-right: 0; margin-bottom: 0">
+    <form id="form1" runat="server">
+    <cc1:ScriptManager ID="ScriptManager" runat="server" EnablePartialRendering="True"></cc1:ScriptManager>
+    <input name="hiddenRelateNewsID" value="" type="hidden" />
+    <div>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td style="background-image: url(/images/admin/bkgd_left_column.gif)">
+                    <img src="/Images/Admin/bkgd_left_column.gif" alt="" />
+                </td>
+                <td valign="top" style="width: 100%">
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <!--Banner-->
+                        <tr>
+                            <td colspan="4" valign="top" style="background-image: url(/Images/Admin/banner_top_bkg.gif)" align="left">
+                                <a href="/Admin/Default.aspx"><img src="/Images/Admin/banner_top.gif" alt="DH Administrator Website" border="0" /></a>
+                            </td>
+                        </tr>
+                        <!--End Banner-->
+                        <!--NavBar-->
+                        <tr>
+                            <td style="width:22%" class="style_time">&nbsp;<%=strDateTime%></td>
+                            <td style="width:18%">                                
+                                <cc1:UpdateProgress id="process" runat="server">
+                                    <ProgressTemplate>
+                                        <img style="margin-top: 3px; margin-left: 5px" src="/Images/Admin/Loading.gif" alt="" />
+                                    </ProgressTemplate>
+                                </cc1:UpdateProgress>
+                            </td>
+                            <td align="right" style="width: 37%">
+                                <img src="/Images/Admin/top_curve.gif" alt="" /></td>
+                            <td style="width: 23%; background-color: #70B226; color:#FFFFFF">
+                                Xin chào bạn: 
+                                <%
+                                if(Session["AdminID"]!=null)
+                                {
+                                    Response.Write(objEntities.UpperCaseFirst(Session["AdminID"].ToString()));
+                                }                                
+                                %>.&nbsp;<a class="White" href="/Admin/SignOut.aspx">[Thoát]</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" style="background-image: url(/Admin/Images/spacer.gif); height: 8">
+                                &nbsp;</td>
+                        </tr>
+                        <!--End Navbar-->
+                        <tr>
+                            <td colspan="4" valign="top">
+                                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                                    <tr>
+                                        <!--Left--->
+                                        <td id="MBLeft" valign="top" runat="server" style="width: 18%" align="center">
+                                        </td>
+                                        <!--End Left-->
+                                        <td style="width: 72%" align="center" valign="top">
+                                            <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+                                            </asp:contentplaceholder>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!--Footer-->
+                        <tr>
+                            <td colspan="4">
+                                <img src="/Images/Admin/spacer.gif" alt="" /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" runat="server" id="MBFooter" style="background-color: #959595">
+                            </td>
+                        </tr>
+                        <!--End Footer-->
+                    </table>
+                </td>
+                <td style="background-image: url(/images/admin/bkgd_right_column.gif)">
+                    <img src="/Images/Admin/bkgd_right_column.gif" alt="" />
+                </td>
+            </tr>
+        </table>        
+    </div>
+    </form>
+</body>
+</html>

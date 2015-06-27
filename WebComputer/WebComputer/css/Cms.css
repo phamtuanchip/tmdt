@@ -1,0 +1,71 @@
+TD {
+	FONT-SIZE: 9pt; FONT-FAMILY: Arial, Verdana, Geneva, Helvetica
+}
+INPUT {
+	BORDER-RIGHT: #7f9db9 1px solid; BORDER-TOP: #7f9db9 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #7f9db9 1px solid; COLOR: #000066; BORDER-BOTTOM: #7f9db9 1px solid; FONT-FAMILY: Tahoma
+}
+.inputsearch {
+	WIDTH: 250px
+}
+.tabon {
+	Height:30px; BORDER-RIGHT: #bcd0da 1px solid; BORDER-TOP: #778a98 1px solid; FONT-WEIGHT: bold; BACKGROUND-IMAGE: url(images/tabon.gif); BORDER-LEFT: #bcd0da 1px solid; WIDTH: 100%; COLOR: #e7470a; PADDING-TOP: 2px; BACKGROUND-REPEAT: repeat-x; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+.taboff{
+	Height:30px; BORDER-RIGHT: #bcd0da 1px solid; BORDER-TOP: #bcd0da 1px solid; BACKGROUND-IMAGE: url(/images/Home/taboff.gif); VERTICAL-ALIGN: bottom; BORDER-LEFT: #bcd0da 1px solid; COLOR: #000066; PADDING-TOP: 2px; BORDER-BOTTOM: #bcd0da 1px solid; BACKGROUND-REPEAT: repeat-x; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+a.LeftMenuItem
+{
+	color:#16387C; text-decoration:none; font-weight:700; font-size: 8pt; font-family: Arial, Verdana, Geneva, Helvetica
+}
+a.LeftMenuItem:visited
+{
+	color:#16387C; text-decoration:none; font-weight:700; font-size: 8pt; font-family: Arial, Verdana, Geneva, Helvetica
+}
+a.LeftMenuItem:hover
+{
+	color:#16387C; text-decoration:underline; font-weight:700; font-size: 8pt; font-family: Arial, Verdana, Geneva, Helvetica
+}
+a.LeftMenuItem:visited:hover
+{
+	color:#16387C; text-decoration:underline; font-weight:700; font-size: 8pt; font-family: Arial, Verdana, Geneva, Helvetica
+}
+td.LeftMenuItem
+{
+	padding-top:3px; padding-bottom:3px; padding-left: 3px; font-size: 8pt; font-family: Arial, Verdana, Geneva, Helvetica;
+}
+td.Title
+{
+	background-image:url(/Images/Home/grd-1px_1_1.gif); height:20px; background-repeat:repeat-x; color:#18397c; background-color:#fff; background-position:bottom left; border:1px solid #b0bec7; border-bottom:1px solid #93a6b4;
+}
+a.BigLink
+{
+	color:#16387C; text-decoration:none; font-weight:700; font-size: 8pt; font-family: Arial, Verdana, Geneva, Helvetica
+}
+a.BigLink:visited
+{
+	color:#16387C; text-decoration:none; font-weight:700; font-size: 8pt; font-family: Arial, Verdana, Geneva, Helvetica
+}
+a.BigLink:hover
+{
+	color:#16387C; text-decoration:underline; font-weight:700; font-size: 8pt; font-family: Arial, Verdana, Geneva, Helvetica
+}
+a.BigLink:visited:hover
+{
+	color:#16387C; text-decoration:underline; font-weight:700; font-size: 8pt; font-family: Arial, Verdana, Geneva, Helvetica
+}
+a.SmallLink
+{
+	color:#16387C; text-decoration:none; font-size: 8pt; font-family: Arial, Verdana, Geneva, Helvetica
+}
+a.SmallLink:visited
+{
+	color:#16387C; text-decoration:none; font-size: 8pt; font-family: Arial, Verdana, Geneva, Helvetica
+}
+a.SmallLink:hover
+{
+	color:#16387C; text-decoration:underline; font-size: 8pt; font-family: Arial, Verdana, Geneva, Helvetica
+}
+a.SmallLink:visited:hover
+{
+	color:#16387C; text-decoration:underline; font-size: 8pt; font-family: Arial, Verdana, Geneva, Helvetica
+}

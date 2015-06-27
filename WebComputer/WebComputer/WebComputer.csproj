@@ -1,0 +1,2334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A8545F8F-6468-48E6-A255-A5D8A37D4615}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebComputer</RootNamespace>
+    <AssemblyName>WebComputer</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\..\..\..\Desktop\ChienYenComputer\WebComputer\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AtlasControlToolkit">
+      <HintPath>..\..\..\..\..\Desktop\ChienYenComputer\WebComputer\bin\AtlasControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Bussiness">
+      <HintPath>..\Bussiness\bin\Debug\Bussiness.dll</HintPath>
+    </Reference>
+    <Reference Include="CollectionPager">
+      <HintPath>..\..\..\..\..\Desktop\ChienYenComputer\WebComputer\bin\CollectionPager.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=14.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=14.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=14.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=14.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Entity">
+      <HintPath>..\Entity\bin\Debug\Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="FredCK.FCKeditorV2">
+      <HintPath>..\..\..\..\..\Desktop\ChienYenComputer\WebComputer\bin\FredCK.FCKeditorV2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Atlas">
+      <HintPath>..\..\..\..\..\Desktop\ChienYenComputer\WebComputer\bin\Microsoft.Web.Atlas.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\ActionLogin_Delete.aspx" />
+    <Content Include="Admin\ActionLog_Action.aspx" />
+    <Content Include="Admin\ActionLog_Delete.aspx" />
+    <Content Include="Admin\ActionLog_Login.aspx" />
+    <Content Include="Admin\BannerCat_AddNew.aspx" />
+    <Content Include="Admin\BannerCat_Edit.aspx" />
+    <Content Include="Admin\Banner_AddNew.aspx" />
+    <Content Include="Admin\Banner_Category.aspx" />
+    <Content Include="Admin\Banner_Edit.aspx" />
+    <Content Include="Admin\Banner_List.aspx" />
+    <Content Include="Admin\Banner_View.aspx" />
+    <Content Include="Admin\Category_List.aspx" />
+    <Content Include="Admin\Category_Pro_Add.aspx" />
+    <Content Include="Admin\Category_Pro_Edit.aspx" />
+    <Content Include="Admin\Category_Pro_List.aspx" />
+    <Content Include="Admin\Cat_Pro_Group_Add.aspx" />
+    <Content Include="Admin\Cat_Pro_Group_Edit.aspx" />
+    <Content Include="Admin\Cat_Pro_Group_List.aspx" />
+    <Content Include="Admin\Customer_Detail.aspx" />
+    <Content Include="Admin\Customer_List.aspx" />
+    <Content Include="Admin\Customer_Report.aspx" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\Editor_AddNew.aspx" />
+    <Content Include="Admin\Editor_Cat_AddNew.aspx" />
+    <Content Include="Admin\Editor_Cat_Delete.aspx" />
+    <Content Include="Admin\Editor_Cat_Edit.aspx" />
+    <Content Include="Admin\Editor_Cat_List.aspx" />
+    <Content Include="Admin\Editor_Cat_Order.aspx" />
+    <Content Include="Admin\Editor_Edit.aspx" />
+    <Content Include="Admin\Editor_List.aspx" />
+    <Content Include="Admin\Editor_View.aspx" />
+    <Content Include="Admin\Editor_Xml_Relate_News.aspx" />
+    <Content Include="Admin\EOFPermission.aspx" />
+    <Content Include="Admin\FAQs_AddNew.aspx" />
+    <Content Include="Admin\FAQs_Edit.aspx" />
+    <Content Include="Admin\FAQs_List.aspx" />
+    <Content Include="Admin\FAQs_View.aspx" />
+    <Content Include="Admin\Gallery_Addnew.aspx" />
+    <Content Include="Admin\Gallery_Category.aspx" />
+    <Content Include="Admin\Gallery_Category_AddNew.aspx" />
+    <Content Include="Admin\Gallery_Category_Delete.aspx" />
+    <Content Include="Admin\Gallery_Category_Edit.aspx" />
+    <Content Include="Admin\Gallery_Edit.aspx" />
+    <Content Include="Admin\Gallery_list.aspx" />
+    <Content Include="Admin\Gallery_View.aspx" />
+    <Content Include="Admin\LibraryCatImage_List.aspx" />
+    <Content Include="Admin\LibraryImage_AddNew.aspx" />
+    <Content Include="Admin\LibraryImage_Edit.aspx" />
+    <Content Include="Admin\LibraryImage_List.aspx" />
+    <Content Include="Admin\LibraryImage_Popup.aspx" />
+    <Content Include="Admin\LibraryImage_View.aspx" />
+    <Content Include="Admin\Library_CatImage_AddNew.aspx" />
+    <Content Include="Admin\Library_CatImage_Delete.aspx" />
+    <Content Include="Admin\Library_CatImage_Edit.aspx" />
+    <Content Include="Admin\Login.aspx" />
+    <Content Include="Admin\LogoCat_AddNew.aspx" />
+    <Content Include="Admin\LogoCat_Edit.aspx" />
+    <Content Include="Admin\Logo_AddNew.aspx" />
+    <Content Include="Admin\Logo_Category.aspx" />
+    <Content Include="Admin\Logo_Edit.aspx" />
+    <Content Include="Admin\Logo_list.aspx" />
+    <Content Include="Admin\Logo_View.aspx" />
+    <Content Include="Admin\MemberGroup_AddNew.aspx" />
+    <Content Include="Admin\MemberGroup_Edit.aspx" />
+    <Content Include="Admin\MemberGroup_List.aspx" />
+    <Content Include="Admin\Member_AddNew.aspx" />
+    <Content Include="Admin\Member_ChangePassword.aspx" />
+    <Content Include="Admin\Member_Edit.aspx" />
+    <Content Include="Admin\Member_List.aspx" />
+    <Content Include="Admin\Member_YourAccount.aspx" />
+    <Content Include="Admin\NewHangSX.aspx" />
+    <Content Include="Admin\OrderBillDetails.aspx" />
+    <Content Include="Admin\OrderBill_Add.aspx" />
+    <Content Include="Admin\OrderBill_List.aspx" />
+    <Content Include="Admin\OrderDetails.aspx" />
+    <Content Include="Admin\Order_List.aspx" />
+    <Content Include="Admin\PaymentOrder.aspx" />
+    <Content Include="Admin\PaymentOrder_Add.aspx" />
+    <Content Include="Admin\Product_Addnew.aspx" />
+    <Content Include="Admin\Product_Cat_AddNew.aspx" />
+    <Content Include="Admin\Product_Cat_Delete.aspx" />
+    <Content Include="Admin\Product_Cat_Edit.aspx" />
+    <Content Include="Admin\Product_Cat_List.aspx" />
+    <Content Include="Admin\Product_Edit.aspx" />
+    <Content Include="Admin\Product_List.aspx" />
+    <Content Include="Admin\Provider_Add.aspx" />
+    <Content Include="Admin\Provider_Debt.aspx" />
+    <Content Include="Admin\Provider_Edit.aspx" />
+    <Content Include="Admin\Provider_List.aspx" />
+    <Content Include="Admin\Provider_Report.aspx" />
+    <Content Include="Admin\Recruit_AddNew.aspx" />
+    <Content Include="Admin\Recruit_Edit.aspx" />
+    <Content Include="Admin\Recruit_List.aspx" />
+    <Content Include="Admin\Recruit_View.aspx" />
+    <Content Include="Admin\Report_Other.aspx" />
+    <Content Include="Admin\SignOut.aspx" />
+    <Content Include="Control\Admin\Footer.ascx" />
+    <Content Include="Control\Admin\Left.ascx" />
+    <Content Include="Control\User\Header.ascx" />
+    <Content Include="Control\User\Left.ascx" />
+    <Content Include="Control\User\LeftNews.ascx" />
+    <Content Include="Control\User\Right.ascx" />
+    <Content Include="count.txt" />
+    <Content Include="css\Cms.css" />
+    <Content Include="css\Default.css" />
+    <Content Include="css\lightbox.css" />
+    <Content Include="css\public.css" />
+    <Content Include="css\StyleSheetAdmin.css" />
+    <Content Include="css\User.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="FCKeditor\editor\css\behaviors\disablehandles.htc" />
+    <Content Include="FCKeditor\editor\css\behaviors\hiddenfield.gif" />
+    <Content Include="FCKeditor\editor\css\behaviors\hiddenfield.htc" />
+    <Content Include="FCKeditor\editor\css\behaviors\showtableborders.htc" />
+    <Content Include="FCKeditor\editor\css\fck_editorarea.css" />
+    <Content Include="FCKeditor\editor\css\fck_internal.css" />
+    <Content Include="FCKeditor\editor\css\fck_showtableborders_gecko.css" />
+    <Content Include="FCKeditor\editor\css\images\fck_anchor.gif" />
+    <Content Include="FCKeditor\editor\css\images\fck_flashlogo.gif" />
+    <Content Include="FCKeditor\editor\css\images\fck_pagebreak.gif" />
+    <Content Include="FCKeditor\editor\dialog\common\fcknumericfield.htc" />
+    <Content Include="FCKeditor\editor\dialog\common\fck_dialog_common.css" />
+    <Content Include="FCKeditor\editor\dialog\common\fck_dialog_common.js" />
+    <Content Include="FCKeditor\editor\dialog\common\images\locked.gif" />
+    <Content Include="FCKeditor\editor\dialog\common\images\reset.gif" />
+    <Content Include="FCKeditor\editor\dialog\common\images\unlocked.gif" />
+    <Content Include="FCKeditor\editor\dialog\common\moz-bindings.xml" />
+    <Content Include="FCKeditor\editor\dialog\fck_about\logo_fckeditor.gif" />
+    <Content Include="FCKeditor\editor\dialog\fck_about\logo_fredck.gif" />
+    <Content Include="FCKeditor\editor\dialog\fck_flash\fck_flash.js" />
+    <Content Include="FCKeditor\editor\dialog\fck_image\fck_image.js" />
+    <Content Include="FCKeditor\editor\dialog\fck_link\fck_link.js" />
+    <Content Include="FCKeditor\editor\dialog\fck_select\fck_select.js" />
+    <Content Include="FCKeditor\editor\dialog\fck_spellerpages\spellerpages\controlWindow.js" />
+    <Content Include="FCKeditor\editor\dialog\fck_spellerpages\spellerpages\spellChecker.js" />
+    <Content Include="FCKeditor\editor\dialog\fck_spellerpages\spellerpages\spellerStyle.css" />
+    <Content Include="FCKeditor\editor\dialog\fck_spellerpages\spellerpages\wordWindow.js" />
+    <Content Include="FCKeditor\editor\dialog\fck_template\images\template1.gif" />
+    <Content Include="FCKeditor\editor\dialog\fck_template\images\template2.gif" />
+    <Content Include="FCKeditor\editor\dialog\fck_template\images\template3.gif" />
+    <Content Include="FCKeditor\editor\dialog\fck_universalkey\00.gif" />
+    <Content Include="FCKeditor\editor\dialog\fck_universalkey\data.js" />
+    <Content Include="FCKeditor\editor\dialog\fck_universalkey\diacritic.js" />
+    <Content Include="FCKeditor\editor\dialog\fck_universalkey\dialogue.js" />
+    <Content Include="FCKeditor\editor\dialog\fck_universalkey\fck_universalkey.css" />
+    <Content Include="FCKeditor\editor\dialog\fck_universalkey\keyboard_layout.gif" />
+    <Content Include="FCKeditor\editor\dialog\fck_universalkey\multihexa.js" />
+    <Content Include="FCKeditor\editor\fckconstants.js" />
+    <Content Include="FCKeditor\editor\fckeditorapi.js" />
+    <Content Include="FCKeditor\editor\fckjscoreextensions.js" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\browser.css" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\ButtonArrow.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\doc.jpg" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\Folder.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\Folder32.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\FolderOpened.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\FolderOpened32.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\FolderUp.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\ai.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\avi.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\bmp.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\cs.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\default.icon.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\dll.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\doc.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\exe.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\fla.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\gif.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\htm.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\html.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\jpg.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\js.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\mdb.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\mp3.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\pdf.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\ppt.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\rdp.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\swf.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\swt.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\txt.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\vsd.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\xls.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\xml.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\zip.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\ai.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\avi.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\bmp.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\cs.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\default.icon.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\dll.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\doc.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\exe.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\fla.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\gif.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\htm.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\html.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\jpg.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\js.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\mdb.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\mp3.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\pdf.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\ppt.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\rdp.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\swf.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\swt.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\txt.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\vsd.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\xls.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\xml.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\icons\zip.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\pdf.jpg" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\spacer.gif" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\thumuc.jpg" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\Unknow.jpg" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\images\zip.jpg" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\js\common.js" />
+    <Content Include="FCKeditor\editor\filemanager\browser\default\js\fckxml.js" />
+    <Content Include="FCKeditor\editor\images\anchor.gif" />
+    <Content Include="FCKeditor\editor\images\arrow_ltr.gif" />
+    <Content Include="FCKeditor\editor\images\arrow_rtl.gif" />
+    <Content Include="FCKeditor\editor\images\smiley\msn\angel_smile.gif" />
+    <Content Include="FCKeditor\editor\images\smiley\msn\angry_smile.gif" />
+    <Content Include="FCKeditor\editor\images\smiley\msn\broken_heart.gif" />
+    <Content Include="FCKeditor\editor\images\smiley\msn\cake.gif" />
+    <Content Include="FCKeditor\editor\images\smiley\msn\confused_smile.gif" />
+    <Content Include="FCKeditor\editor\images\smiley\msn\cry_smile.gif" />
+    <Content Include="FCKeditor\editor\images\smiley\msn\devil_smile.gif" />
+    <Content Include="FCKeditor\editor\images\smiley\msn\embaressed_smile.gif" />
+    <Content Include="FCKeditor\editor\images\smiley\msn\envelope.gif" />
+    <Content Include="FCKeditor\editor\images\smiley\msn\heart.gif" />
+    <Content Include="FCKeditor\editor\images\smiley\msn\kiss.gif" />
+    <Content Include="FCKeditor\editor\images\smiley\msn\lightbulb.gif" />
+    <Content Include="FCKeditor\editor\images\smiley\msn\omg_smile.gif" />
+    <Content Include="FCKeditor\editor\images\smiley\msn\regular_smile.gif" />
+    <Content Include="FCKeditor\editor\images\smiley\msn\sad_smile.gif" />
+    <Content Include="FCKeditor\editor\images\smiley\msn\shades_smile.gif" />
+    <Content Include="FCKeditor\editor\images\smiley\msn\teeth_smile.gif" />
+    <Content Include="FCKeditor\editor\images\smiley\msn\thumbs_down.gif" />
+    <Content Include="FCKeditor\editor\images\smiley\msn\thumbs_up.gif" />
+    <Content Include="FCKeditor\editor\images\smiley\msn\tounge_smile.gif" />
+    <Content Include="FCKeditor\editor\images\smiley\msn\whatchutalkingabout_smile.gif" />
+    <Content Include="FCKeditor\editor\images\smiley\msn\wink_smile.gif" />
+    <Content Include="FCKeditor\editor\images\spacer.gif" />
+    <Content Include="FCKeditor\editor\js\fckeditorcode_gecko.js" />
+    <Content Include="FCKeditor\editor\js\fckeditorcode_ie.js" />
+    <Content Include="FCKeditor\editor\lang\ar.js" />
+    <Content Include="FCKeditor\editor\lang\bg.js" />
+    <Content Include="FCKeditor\editor\lang\bn.js" />
+    <Content Include="FCKeditor\editor\lang\bs.js" />
+    <Content Include="FCKeditor\editor\lang\ca.js" />
+    <Content Include="FCKeditor\editor\lang\cs.js" />
+    <Content Include="FCKeditor\editor\lang\da.js" />
+    <Content Include="FCKeditor\editor\lang\de.js" />
+    <Content Include="FCKeditor\editor\lang\el.js" />
+    <Content Include="FCKeditor\editor\lang\en-au.js" />
+    <Content Include="FCKeditor\editor\lang\en-ca.js" />
+    <Content Include="FCKeditor\editor\lang\en-uk.js" />
+    <Content Include="FCKeditor\editor\lang\en.js" />
+    <Content Include="FCKeditor\editor\lang\eo.js" />
+    <Content Include="FCKeditor\editor\lang\es.js" />
+    <Content Include="FCKeditor\editor\lang\et.js" />
+    <Content Include="FCKeditor\editor\lang\eu.js" />
+    <Content Include="FCKeditor\editor\lang\fa.js" />
+    <Content Include="FCKeditor\editor\lang\fi.js" />
+    <Content Include="FCKeditor\editor\lang\fo.js" />
+    <Content Include="FCKeditor\editor\lang\fr.js" />
+    <Content Include="FCKeditor\editor\lang\gl.js" />
+    <Content Include="FCKeditor\editor\lang\he.js" />
+    <Content Include="FCKeditor\editor\lang\hi.js" />
+    <Content Include="FCKeditor\editor\lang\hr.js" />
+    <Content Include="FCKeditor\editor\lang\hu.js" />
+    <Content Include="FCKeditor\editor\lang\it.js" />
+    <Content Include="FCKeditor\editor\lang\ja.js" />
+    <Content Include="FCKeditor\editor\lang\km.js" />
+    <Content Include="FCKeditor\editor\lang\ko.js" />
+    <Content Include="FCKeditor\editor\lang\lt.js" />
+    <Content Include="FCKeditor\editor\lang\lv.js" />
+    <Content Include="FCKeditor\editor\lang\mn.js" />
+    <Content Include="FCKeditor\editor\lang\ms.js" />
+    <Content Include="FCKeditor\editor\lang\nl.js" />
+    <Content Include="FCKeditor\editor\lang\no.js" />
+    <Content Include="FCKeditor\editor\lang\pl.js" />
+    <Content Include="FCKeditor\editor\lang\pt-br.js" />
+    <Content Include="FCKeditor\editor\lang\pt.js" />
+    <Content Include="FCKeditor\editor\lang\ro.js" />
+    <Content Include="FCKeditor\editor\lang\ru.js" />
+    <Content Include="FCKeditor\editor\lang\sk.js" />
+    <Content Include="FCKeditor\editor\lang\sl.js" />
+    <Content Include="FCKeditor\editor\lang\sr-latn.js" />
+    <Content Include="FCKeditor\editor\lang\sr.js" />
+    <Content Include="FCKeditor\editor\lang\sv.js" />
+    <Content Include="FCKeditor\editor\lang\th.js" />
+    <Content Include="FCKeditor\editor\lang\tr.js" />
+    <Content Include="FCKeditor\editor\lang\uk.js" />
+    <Content Include="FCKeditor\editor\lang\vi.js" />
+    <Content Include="FCKeditor\editor\lang\zh-cn.js" />
+    <Content Include="FCKeditor\editor\lang\zh.js" />
+    <Content Include="FCKeditor\editor\lang\_translationstatus.txt" />
+    <Content Include="FCKeditor\editor\plugins\autogrow\fckplugin.js" />
+    <Content Include="FCKeditor\editor\plugins\placeholder\fckplugin.js" />
+    <Content Include="FCKeditor\editor\plugins\placeholder\lang\de.js" />
+    <Content Include="FCKeditor\editor\plugins\placeholder\lang\en.js" />
+    <Content Include="FCKeditor\editor\plugins\placeholder\lang\fr.js" />
+    <Content Include="FCKeditor\editor\plugins\placeholder\lang\it.js" />
+    <Content Include="FCKeditor\editor\plugins\placeholder\lang\pl.js" />
+    <Content Include="FCKeditor\editor\plugins\placeholder\placeholder.gif" />
+    <Content Include="FCKeditor\editor\plugins\simplecommands\fckplugin.js" />
+    <Content Include="FCKeditor\editor\plugins\skins\FPT\fck_dialog.css" />
+    <Content Include="FCKeditor\editor\plugins\skins\FPT\fck_editor.css" />
+    <Content Include="FCKeditor\editor\plugins\skins\FPT\fck_strip.gif" />
+    <Content Include="FCKeditor\editor\plugins\skins\FPT\images\fck_dialog.css" />
+    <Content Include="FCKeditor\editor\plugins\skins\FPT\images\fck_editor.css" />
+    <Content Include="FCKeditor\editor\plugins\skins\FPT\images\fck_strip.gif" />
+    <Content Include="FCKeditor\editor\plugins\skins\FPT\images\toolbar.arrowright.gif" />
+    <Content Include="FCKeditor\editor\plugins\skins\FPT\images\toolbar.bg.gif" />
+    <Content Include="FCKeditor\editor\plugins\skins\FPT\images\toolbar.buttonarrow.gif" />
+    <Content Include="FCKeditor\editor\plugins\skins\FPT\images\toolbar.collapse.gif" />
+    <Content Include="FCKeditor\editor\plugins\skins\FPT\images\toolbar.end.gif" />
+    <Content Include="FCKeditor\editor\plugins\skins\FPT\images\toolbar.expand.gif" />
+    <Content Include="FCKeditor\editor\plugins\skins\FPT\images\toolbar.separator.gif" />
+    <Content Include="FCKeditor\editor\plugins\skins\FPT\images\toolbar.start.gif" />
+    <Content Include="FCKeditor\editor\plugins\tablecommands\fckplugin.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fckcontextmenu.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fckeditingarea.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fckevents.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fckicon.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fckiecleanup.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fckmenublock.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fckmenublockpanel.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fckmenuitem.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fckpanel.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fckplugin.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fckspecialcombo.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fckstyledef.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fckstyledef_gecko.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fckstyledef_ie.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fckstylesloader.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fcktoolbar.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fcktoolbarbreak_gecko.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fcktoolbarbreak_ie.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fcktoolbarbutton.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fcktoolbarbuttonui.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fcktoolbarfontformatcombo.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fcktoolbarfontscombo.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fcktoolbarfontsizecombo.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fcktoolbarpanelbutton.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fcktoolbarspecialcombo.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fcktoolbarstylecombo.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fckxml_gecko.js" />
+    <Content Include="FCKeditor\editor\_source\classes\fckxml_ie.js" />
+    <Content Include="FCKeditor\editor\_source\commandclasses\fckfitwindow.js" />
+    <Content Include="FCKeditor\editor\_source\commandclasses\fcknamedcommand.js" />
+    <Content Include="FCKeditor\editor\_source\commandclasses\fckpasteplaintextcommand.js" />
+    <Content Include="FCKeditor\editor\_source\commandclasses\fckpastewordcommand.js" />
+    <Content Include="FCKeditor\editor\_source\commandclasses\fckspellcheckcommand_gecko.js" />
+    <Content Include="FCKeditor\editor\_source\commandclasses\fckspellcheckcommand_ie.js" />
+    <Content Include="FCKeditor\editor\_source\commandclasses\fckstylecommand.js" />
+    <Content Include="FCKeditor\editor\_source\commandclasses\fcktablecommand.js" />
+    <Content Include="FCKeditor\editor\_source\commandclasses\fcktextcolorcommand.js" />
+    <Content Include="FCKeditor\editor\_source\commandclasses\fck_othercommands.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fck.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fckbrowserinfo.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fckcodeformatter.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fckcommands.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fckconfig.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fckdebug.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fckdialog.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fckdialog_gecko.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fckdialog_ie.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fckdocumentprocessor.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fcklanguagemanager.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fckplugins.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fckregexlib.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fckselection.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fckselection_gecko.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fckselection_ie.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fcktablehandler.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fcktablehandler_gecko.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fcktablehandler_ie.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fcktoolbaritems.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fcktoolbarset.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fcktools.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fcktools_gecko.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fcktools_ie.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fckundo_gecko.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fckundo_ie.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fckurlparams.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fckxhtml.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fckxhtmlentities.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fckxhtml_gecko.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fckxhtml_ie.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fck_1.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fck_1_gecko.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fck_1_ie.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fck_2.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fck_2_gecko.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fck_2_ie.js" />
+    <Content Include="FCKeditor\editor\_source\internals\fck_contextmenu.js" />
+    <Content Include="FCKeditor\fckconfig.js" />
+    <Content Include="FCKeditor\fckeditor.js" />
+    <Content Include="FCKeditor\fckstyles.xml" />
+    <Content Include="FCKeditor\fcktemplates.xml" />
+    <Content Include="Home\Build.aspx" />
+    <Content Include="Home\Cart.aspx" />
+    <Content Include="Home\CartShow.aspx" />
+    <Content Include="Home\CheckCustomer.aspx" />
+    <Content Include="Home\Contact.aspx" />
+    <Content Include="Home\Default.aspx" />
+    <Content Include="Home\Erros.aspx" />
+    <Content Include="Home\Login.aspx" />
+    <Content Include="Home\News.aspx" />
+    <Content Include="Home\NewsDetails.aspx" />
+    <Content Include="Home\PreviewOrder.aspx" />
+    <Content Include="Home\ProcessOrder.aspx" />
+    <Content Include="Home\Product.aspx" />
+    <Content Include="Home\ProductDetails.aspx" />
+    <Content Include="Home\Recruitment.aspx" />
+    <Content Include="Home\Register.aspx" />
+    <Content Include="Home\ShowNews.aspx" />
+    <Content Include="Home\ShowProduct.aspx" />
+    <Content Include="Images\accept.jpg" />
+    <Content Include="Images\add_cart.gif" />
+    <Content Include="Images\Admin\arrow_color.gif" />
+    <Content Include="Images\Admin\banner2.swf" />
+    <Content Include="Images\Admin\banner_top.gif" />
+    <Content Include="Images\Admin\banner_top.jpg" />
+    <Content Include="Images\Admin\banner_topleft.jpg" />
+    <Content Include="Images\Admin\banner_topleft1.jpg" />
+    <Content Include="Images\Admin\banner_top_bkg.gif" />
+    <Content Include="Images\Admin\barTopMenu.gif" />
+    <Content Include="Images\Admin\bgDeviceList.gif" />
+    <Content Include="Images\Admin\bkgd_left_column.gif" />
+    <Content Include="Images\Admin\bkgd_right_column.gif" />
+    <Content Include="Images\Admin\btnsearch.jpg" />
+    <Content Include="Images\Admin\calendar\Cal.Gif" />
+    <Content Include="Images\Admin\calendar\close.gif" />
+    <Content Include="Images\Admin\calendar\drop1.gif" />
+    <Content Include="Images\Admin\calendar\drop2.gif" />
+    <Content Include="Images\Admin\calendar\left1.gif" />
+    <Content Include="Images\Admin\calendar\left2.gif" />
+    <Content Include="Images\Admin\calendar\right1.gif" />
+    <Content Include="Images\Admin\calendar\right2.gif" />
+    <Content Include="Images\Admin\close.gif" />
+    <Content Include="Images\Admin\collapse.jpg" />
+    <Content Include="Images\Admin\Delete.gif" />
+    <Content Include="Images\Admin\dichvu.gif" />
+    <Content Include="Images\Admin\download.jpg" />
+    <Content Include="Images\Admin\dropdown.gif" />
+    <Content Include="Images\Admin\edit_u.gif" />
+    <Content Include="Images\Admin\end.gif" />
+    <Content Include="Images\Admin\expand.jpg" />
+    <Content Include="Images\Admin\expand_blue.jpg" />
+    <Content Include="Images\Admin\gioithieu.gif" />
+    <Content Include="Images\Admin\home.gif" />
+    <Content Include="Images\Admin\insertimagefromgallery.gif" />
+    <Content Include="Images\Admin\Keyboard.gif" />
+    <Content Include="Images\Admin\keyboard_icon.gif" />
+    <Content Include="Images\Admin\khuyenmai.gif" />
+    <Content Include="Images\Admin\loading.gif" />
+    <Content Include="Images\Admin\mail.gif" />
+    <Content Include="Images\Admin\new.gif" />
+    <Content Include="Images\Admin\note.gif" />
+    <Content Include="Images\Admin\projectbox_bkg.gif" />
+    <Content Include="Images\Admin\project_icon_sm.gif" />
+    <Content Include="Images\Admin\quangcao1.gif" />
+    <Content Include="Images\Admin\Relate.gif" />
+    <Content Include="Images\Admin\save.gif" />
+    <Content Include="Images\Admin\search.gif" />
+    <Content Include="Images\Admin\sidebarheaderbg.gif" />
+    <Content Include="Images\Admin\spacer.gif" />
+    <Content Include="Images\Admin\tintuc.gif" />
+    <Content Include="Images\Admin\top_curve.gif" />
+    <Content Include="Images\arrow_color.gif" />
+    <Content Include="Images\banner.swf" />
+    <Content Include="Images\banner2.swf" />
+    <Content Include="Images\barTopMenu.gif" />
+    <Content Include="Images\bg.gif" />
+    <Content Include="Images\bg2.gif" />
+    <Content Include="Images\bgDeviceList.gif" />
+    <Content Include="Images\bg_menu.gif" />
+    <Content Include="Images\btnsearch.jpg" />
+    <Content Include="Images\bullet.gif" />
+    <Content Include="Images\bullet2.gif" />
+    <Content Include="Images\canhphai.gif" />
+    <Content Include="Images\canhtrai.gif" />
+    <Content Include="Images\checkout.jpg" />
+    <Content Include="Images\chienyen.swf" />
+    <Content Include="Images\circle-chart.gif" />
+    <Content Include="Images\close.gif" />
+    <Content Include="Images\closelabel.gif" />
+    <Content Include="Images\contine.jpg" />
+    <Content Include="Images\create_acc.jpg" />
+    <Content Include="Images\delete.gif" />
+    <Content Include="Images\delete_order.jpg" />
+    <Content Include="Images\dgrid.gif" />
+    <Content Include="Images\dichvu.gif" />
+    <Content Include="Images\dlist.gif" />
+    <Content Include="Images\donate-button.gif" />
+    <Content Include="Images\download-icon.gif" />
+    <Content Include="Images\download.png" />
+    <Content Include="Images\dropdown.gif" />
+    <Content Include="Images\gioithieu.gif" />
+    <Content Include="Images\hchienyen.swf" />
+    <Content Include="Images\hhchienyen.swf" />
+    <Content Include="Images\hhhchienyen.swf" />
+    <Content Include="Images\hhhhchienyen.swf" />
+    <Content Include="Images\hhhhhchienyen.swf" />
+    <Content Include="Images\image002.jpg" />
+    <Content Include="Images\khuyenmai.gif" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\login.jpg" />
+    <Content Include="Images\menu_left.jpg" />
+    <Content Include="Images\money.gif" />
+    <Content Include="Images\nextlabel.gif" />
+    <Content Include="Images\prevlabel.gif" />
+    <Content Include="Images\qc\8x01.swf" />
+    <Content Include="Images\qc\aptech.jpg" />
+    <Content Include="Images\qc\diemsangviet_125x125.swf" />
+    <Content Include="Images\qc\fpt.jpg" />
+    <Content Include="Images\qc\hchienyen.swf" />
+    <Content Include="Images\qc\image002.jpg" />
+    <Content Include="Images\qc\nokia_125x125.swf" />
+    <Content Include="Images\qc\qc_banner.jpg" />
+    <Content Include="Images\qc\quancao.jpg" />
+    <Content Include="Images\qc\quangcaomuahe.jpg" />
+    <Content Include="Images\qc\quangcaomuahe1.jpg" />
+    <Content Include="Images\qc\quangcaomuahe2.jpg" />
+    <Content Include="Images\qc\quangcaomuahechuan.jpg" />
+    <Content Include="Images\qc\quangcaomuahechuanngon.jpg" />
+    <Content Include="Images\qc\thanhvan_125x125.swf" />
+    <Content Include="Images\qc\tuyendung_468x90.swf" />
+    <Content Include="Images\qc\yellopages.swf" />
+    <Content Include="Images\quangcao1.gif" />
+    <Content Include="Images\register.jpg" />
+    <Content Include="Images\reset.jpg" />
+    <Content Include="Images\shopping_cart.jpeg" />
+    <Content Include="Images\ten.gif" />
+    <Content Include="Images\thanhdat1.swf" />
+    <Content Include="Images\thanhdat11.swf" />
+    <Content Include="Images\tintuc.gif" />
+    <Content Include="Images\view_order.jpg" />
+    <Content Include="index.html" />
+    <Content Include="js\Calendar.js" />
+    <Content Include="js\effects.js" />
+    <Content Include="js\Forex.js" />
+    <Content Include="js\Forex_Content.js" />
+    <Content Include="js\Function.js" />
+    <Content Include="js\Gold_Content.js" />
+    <Content Include="js\library.js" />
+    <Content Include="js\lightbox.js" />
+    <Content Include="js\prototype.js" />
+    <Content Include="js\scriptaculous.js" />
+    <Content Include="js\Vne.js" />
+    <Content Include="js\vnex.js" />
+    <Content Include="js\Weather.js" />
+    <Content Include="Languages\Vietnam.xml" />
+    <Content Include="mycustompage.htm" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Uploads\Banner\200812101050622.gif" />
+    <Content Include="Uploads\LibraryImages\200910151710315.jpg" />
+    <Content Include="Uploads\LibraryImages\200910151710315_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20091015180597.jpg" />
+    <Content Include="Uploads\LibraryImages\20091015180597_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200910151822175.jpg" />
+    <Content Include="Uploads\LibraryImages\200910151822175_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20091023949651.jpg" />
+    <Content Include="Uploads\LibraryImages\20091023949651_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20091027129964.jpg" />
+    <Content Include="Uploads\LibraryImages\20091027129964_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200910271450245.jpg" />
+    <Content Include="Uploads\LibraryImages\200910271450245_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20091029112447.jpg" />
+    <Content Include="Uploads\LibraryImages\20091029112447_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200910699640.jpg" />
+    <Content Include="Uploads\LibraryImages\200910699640_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200911102145562.jpg" />
+    <Content Include="Uploads\LibraryImages\200911102145562_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200911141817385.jpg" />
+    <Content Include="Uploads\LibraryImages\200911141817385_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200911171112853.jpg" />
+    <Content Include="Uploads\LibraryImages\200911171112853_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20091182151406.jpg" />
+    <Content Include="Uploads\LibraryImages\20091182151406_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20091191542640.jpg" />
+    <Content Include="Uploads\LibraryImages\20091191542640_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200911915430.jpg" />
+    <Content Include="Uploads\LibraryImages\200911915430_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20091191550109.jpg" />
+    <Content Include="Uploads\LibraryImages\20091191550109_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20091191610906.jpg" />
+    <Content Include="Uploads\LibraryImages\20091191610906_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009119161093.jpg" />
+    <Content Include="Uploads\LibraryImages\2009119161093_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20091191611218.jpg" />
+    <Content Include="Uploads\LibraryImages\20091191611218_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20091211820781.jpg" />
+    <Content Include="Uploads\LibraryImages\20091211820781_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009121185984.jpg" />
+    <Content Include="Uploads\LibraryImages\2009121185984_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20091221932533.jpg" />
+    <Content Include="Uploads\LibraryImages\20091221932533_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200912232247187.jpg" />
+    <Content Include="Uploads\LibraryImages\200912232247187_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200912232310671.jpg" />
+    <Content Include="Uploads\LibraryImages\200912232310671_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20091224151831.jpg" />
+    <Content Include="Uploads\LibraryImages\20091224151831_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200912241518343.jpg" />
+    <Content Include="Uploads\LibraryImages\200912241518343_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200912251716890.jpg" />
+    <Content Include="Uploads\LibraryImages\200912251716890_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200912251716921.jpg" />
+    <Content Include="Uploads\LibraryImages\200912251716921_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20091229121460.jpg" />
+    <Content Include="Uploads\LibraryImages\20091229121460_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200912291217601.jpg" />
+    <Content Include="Uploads\LibraryImages\200912291217601_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20091229123554.jpg" />
+    <Content Include="Uploads\LibraryImages\20091229123554_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200931241010.jpg" />
+    <Content Include="Uploads\LibraryImages\200931241010_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009312419765.jpg" />
+    <Content Include="Uploads\LibraryImages\2009312419765_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200931242471.jpg" />
+    <Content Include="Uploads\LibraryImages\200931242471_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200931322916.jpg" />
+    <Content Include="Uploads\LibraryImages\200931322916_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009313245457.jpg" />
+    <Content Include="Uploads\LibraryImages\2009313245457_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009313256515.jpg" />
+    <Content Include="Uploads\LibraryImages\2009313256515_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009315333342.jpg" />
+    <Content Include="Uploads\LibraryImages\2009315333342_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009315333584.jpg" />
+    <Content Include="Uploads\LibraryImages\2009315333584_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009315347859.jpg" />
+    <Content Include="Uploads\LibraryImages\2009315347859_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161217228.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161217228_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161217421.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161217421_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161217456.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161217456_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161217630.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161217630_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161217745.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161217745_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161218318.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161218318_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161218469.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161218469_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161218508.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161218508_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161218549.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161218549_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161218729.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161218729_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161218799.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161218799_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161219724.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161219724_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161219813.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161219813_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161219851.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161219851_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200931612203.jpg" />
+    <Content Include="Uploads\LibraryImages\200931612203_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161220698.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161220698_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161220747.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161220747_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161220754.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161220754_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161220836.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161220836_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009316122142.jpg" />
+    <Content Include="Uploads\LibraryImages\2009316122142_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009316122162.jpg" />
+    <Content Include="Uploads\LibraryImages\2009316122162_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009316122237.jpg" />
+    <Content Include="Uploads\LibraryImages\2009316122237_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200931612293.jpg" />
+    <Content Include="Uploads\LibraryImages\200931612293_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009316123191.jpg" />
+    <Content Include="Uploads\LibraryImages\2009316123191_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009316123335.jpg" />
+    <Content Include="Uploads\LibraryImages\2009316123335_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009316123763.jpg" />
+    <Content Include="Uploads\LibraryImages\2009316123763_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009316123884.jpg" />
+    <Content Include="Uploads\LibraryImages\2009316123884_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161311283.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161311283_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161311370.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161311370_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161311754.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161311754_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161311994.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161311994_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161318675.jpg" />
+    <Content Include="Uploads\LibraryImages\20093161318675_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009316131951.jpg" />
+    <Content Include="Uploads\LibraryImages\2009316131951_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200931828217.jpg" />
+    <Content Include="Uploads\LibraryImages\200931828217_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093182830.jpg" />
+    <Content Include="Uploads\LibraryImages\20093182830_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200931828670.jpg" />
+    <Content Include="Uploads\LibraryImages\200931828670_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20093191117377.jpg" />
+    <Content Include="Uploads\LibraryImages\20093191117377_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094131122531.jpg" />
+    <Content Include="Uploads\LibraryImages\20094131124609.jpg" />
+    <Content Include="Uploads\LibraryImages\2009413112863.jpg" />
+    <Content Include="Uploads\LibraryImages\200941312130.jpg" />
+    <Content Include="Uploads\LibraryImages\20094131215422.jpg" />
+    <Content Include="Uploads\LibraryImages\20094131758656.jpg" />
+    <Content Include="Uploads\LibraryImages\20094131836922.jpg" />
+    <Content Include="Uploads\LibraryImages\2009413186297.jpg" />
+    <Content Include="Uploads\LibraryImages\2009413186297_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200941413170.jpg" />
+    <Content Include="Uploads\LibraryImages\200941413170_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094141330813.jpg" />
+    <Content Include="Uploads\LibraryImages\20094141330813_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094141549516.jpg" />
+    <Content Include="Uploads\LibraryImages\20094141549516_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094141855141.jpg" />
+    <Content Include="Uploads\LibraryImages\20094141858266.jpg" />
+    <Content Include="Uploads\LibraryImages\20094141858266_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009415121625.jpg" />
+    <Content Include="Uploads\LibraryImages\2009415121625_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094171214587.jpg" />
+    <Content Include="Uploads\LibraryImages\2009417125649.jpg" />
+    <Content Include="Uploads\LibraryImages\2009417125649_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094171526477.jpg" />
+    <Content Include="Uploads\LibraryImages\20094171527852.jpg" />
+    <Content Include="Uploads\LibraryImages\20094171551946.jpg" />
+    <Content Include="Uploads\LibraryImages\20094171553524.jpg" />
+    <Content Include="Uploads\LibraryImages\20094171553524_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094171554571.jpg" />
+    <Content Include="Uploads\LibraryImages\20094171554571_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094171555368.jpg" />
+    <Content Include="Uploads\LibraryImages\20094171555368_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094171622915.jpg" />
+    <Content Include="Uploads\LibraryImages\20094171622915_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094171626931.jpg" />
+    <Content Include="Uploads\LibraryImages\20094171626931_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094171628977.jpg" />
+    <Content Include="Uploads\LibraryImages\20094171810368.jpg" />
+    <Content Include="Uploads\LibraryImages\20094171810368_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009417182649.jpg" />
+    <Content Include="Uploads\LibraryImages\2009417182649_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009417183118.jpg" />
+    <Content Include="Uploads\LibraryImages\2009417183118_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009417185243.jpg" />
+    <Content Include="Uploads\LibraryImages\2009417185243_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009417185602.jpg" />
+    <Content Include="Uploads\LibraryImages\2009417185602_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009417186290.jpg" />
+    <Content Include="Uploads\LibraryImages\2009417186290_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009417186977.jpg" />
+    <Content Include="Uploads\LibraryImages\2009417186977_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181057181.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181057181_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181057196.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181057196_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181058196.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181058196_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181058696.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181058696_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181058899.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181058899_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181059415.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181059415_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181136446.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181136446_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181139274.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181141712.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181141712_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181141790.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181141790_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181142837.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181142837_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181143962.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181143962_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181648462.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181648462_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009418170415.jpg" />
+    <Content Include="Uploads\LibraryImages\2009418170415_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181713946.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181713946_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009418172696.jpg" />
+    <Content Include="Uploads\LibraryImages\2009418172696_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009418173446.jpg" />
+    <Content Include="Uploads\LibraryImages\2009418173446_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009418174165.jpg" />
+    <Content Include="Uploads\LibraryImages\2009418174165_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094181743790.jpg" />
+    <Content Include="Uploads\LibraryImages\2009418174431.jpg" />
+    <Content Include="Uploads\LibraryImages\2009418174431_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009418179556.jpg" />
+    <Content Include="Uploads\LibraryImages\2009418179556_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191014218.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191014218_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191014875.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191014875_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191015656.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191015656_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191015843.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191015843_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191016265.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191016265_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009419101631.jpg" />
+    <Content Include="Uploads\LibraryImages\2009419101631_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191016890.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191017656.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191017656_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191124359.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191124359_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191124578.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191124578_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191139203.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191139203_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191142109.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191142109_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191147312.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191147312_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191611312.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191611312_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191611625.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191611625_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191612171.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191612171_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191612218.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191612218_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191621187.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191621187_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009419162193.jpg" />
+    <Content Include="Uploads\LibraryImages\2009419162193_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191715234.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191715234_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191715421.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191715421_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191715765.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191715765_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191716984.jpg" />
+    <Content Include="Uploads\LibraryImages\20094191716984_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009420831828.jpg" />
+    <Content Include="Uploads\LibraryImages\2009420831828_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094241022536.jpg" />
+    <Content Include="Uploads\LibraryImages\20094241022536_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20094241041114.jpg" />
+    <Content Include="Uploads\LibraryImages\2009424104120.jpg" />
+    <Content Include="Uploads\LibraryImages\200942410435.jpg" />
+    <Content Include="Uploads\LibraryImages\200942410435_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095191150765.jpg" />
+    <Content Include="Uploads\LibraryImages\20095191150765_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095191150797.jpg" />
+    <Content Include="Uploads\LibraryImages\20095191150797_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200951912447.jpg" />
+    <Content Include="Uploads\LibraryImages\200951912447_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009519164462.jpg" />
+    <Content Include="Uploads\LibraryImages\2009519164462_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009520183315.jpg" />
+    <Content Include="Uploads\LibraryImages\2009520183315_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095221529187.jpg" />
+    <Content Include="Uploads\LibraryImages\20095221529187_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231146828.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231146828_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009523165578.jpg" />
+    <Content Include="Uploads\LibraryImages\2009523165578_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231656390.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231656390_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231711234.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231711234_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231712359.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231712359_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231712375.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231712375_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231715625.jpg" />
+    <Content Include="Uploads\LibraryImages\2009523172328.jpg" />
+    <Content Include="Uploads\LibraryImages\2009523172328_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200952317247.jpg" />
+    <Content Include="Uploads\LibraryImages\2009523173125.jpg" />
+    <Content Include="Uploads\LibraryImages\2009523173125_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009523173875.jpg" />
+    <Content Include="Uploads\LibraryImages\2009523173875_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231752339.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231752339_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009523175578.jpg" />
+    <Content Include="Uploads\LibraryImages\2009523175578_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231758899.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231758899_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009523179703.jpg" />
+    <Content Include="Uploads\LibraryImages\2009523179703_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009523181614.jpg" />
+    <Content Include="Uploads\LibraryImages\2009523181614_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231829312.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231829312_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231829732.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231829732_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231829972.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231829972_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231830272.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231830272_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231830384.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231830384_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231830455.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231830455_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231830464.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231830464_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231831160.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231831160_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231831511.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231831511_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009523183160.jpg" />
+    <Content Include="Uploads\LibraryImages\2009523183160_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231831787.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231831787_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231831908.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231831908_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231831930.jpg" />
+    <Content Include="Uploads\LibraryImages\20095231831930_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009524105466.jpg" />
+    <Content Include="Uploads\LibraryImages\2009524105466_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009524106428.jpg" />
+    <Content Include="Uploads\LibraryImages\2009524106428_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095241619125.jpg" />
+    <Content Include="Uploads\LibraryImages\20095241619125_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095241620568.jpg" />
+    <Content Include="Uploads\LibraryImages\20095241620568_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095241620589.jpg" />
+    <Content Include="Uploads\LibraryImages\20095241620589_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095241621971.jpg" />
+    <Content Include="Uploads\LibraryImages\20095241621971_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095241622981.jpg" />
+    <Content Include="Uploads\LibraryImages\20095241622981_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095241625170.jpg" />
+    <Content Include="Uploads\LibraryImages\20095241625170_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095241626336.jpg" />
+    <Content Include="Uploads\LibraryImages\20095241626336_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095241627378.jpg" />
+    <Content Include="Uploads\LibraryImages\20095241627378_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095241628102.jpg" />
+    <Content Include="Uploads\LibraryImages\20095241628102_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095241628715.jpg" />
+    <Content Include="Uploads\LibraryImages\20095241628715_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095241629424.jpg" />
+    <Content Include="Uploads\LibraryImages\20095241629424_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200952494925.jpg" />
+    <Content Include="Uploads\LibraryImages\200952494925_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200952494990.jpg" />
+    <Content Include="Uploads\LibraryImages\200952494990_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009524950376.jpg" />
+    <Content Include="Uploads\LibraryImages\2009524950376_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009524950382.jpg" />
+    <Content Include="Uploads\LibraryImages\2009524950382_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009524952430.jpg" />
+    <Content Include="Uploads\LibraryImages\2009524952430_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009524953888.jpg" />
+    <Content Include="Uploads\LibraryImages\2009524953888_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009524954739.jpg" />
+    <Content Include="Uploads\LibraryImages\2009524954739_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009524955516.jpg" />
+    <Content Include="Uploads\LibraryImages\2009524955516_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009524957890.jpg" />
+    <Content Include="Uploads\LibraryImages\2009524957890_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009524958692.jpg" />
+    <Content Include="Uploads\LibraryImages\2009524958692_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009524959423.jpg" />
+    <Content Include="Uploads\LibraryImages\2009524959423_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095271546464.jpg" />
+    <Content Include="Uploads\LibraryImages\20095271546464_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20095271547917.jpg" />
+    <Content Include="Uploads\LibraryImages\20095271547917_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009611150354.jpg" />
+    <Content Include="Uploads\LibraryImages\2009611150354_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009625165135.jpg" />
+    <Content Include="Uploads\LibraryImages\2009625165135_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009625166464.jpg" />
+    <Content Include="Uploads\LibraryImages\2009625166464_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009632330329.jpg" />
+    <Content Include="Uploads\LibraryImages\2009632330329_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200964859173.jpg" />
+    <Content Include="Uploads\LibraryImages\200964859173_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009661852232.jpg" />
+    <Content Include="Uploads\LibraryImages\2009661852232_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009661855244.jpg" />
+    <Content Include="Uploads\LibraryImages\2009661855244_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009691114713.jpg" />
+    <Content Include="Uploads\LibraryImages\2009691114713_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009691115245.jpg" />
+    <Content Include="Uploads\LibraryImages\2009691115245_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009691117854.jpg" />
+    <Content Include="Uploads\LibraryImages\2009691117854_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20097101047667.jpg" />
+    <Content Include="Uploads\LibraryImages\20097101047667_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20097101050573.jpg" />
+    <Content Include="Uploads\LibraryImages\20097101050573_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20097101053448.jpg" />
+    <Content Include="Uploads\LibraryImages\20097101053448_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20097121646385.jpg" />
+    <Content Include="Uploads\LibraryImages\20097121646385_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009718123956.jpg" />
+    <Content Include="Uploads\LibraryImages\2009718123956_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20097201227385.jpg" />
+    <Content Include="Uploads\LibraryImages\20097201227385_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20097201730823.jpg" />
+    <Content Include="Uploads\LibraryImages\20097201730823_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009720185635.jpg" />
+    <Content Include="Uploads\LibraryImages\2009720185635_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009721102526.jpg" />
+    <Content Include="Uploads\LibraryImages\2009721102526_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009721941776.jpg" />
+    <Content Include="Uploads\LibraryImages\2009721941776_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20097241757468.jpg" />
+    <Content Include="Uploads\LibraryImages\20097241757468_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009731141116.jpg" />
+    <Content Include="Uploads\LibraryImages\2009731141116_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009731151772.jpg" />
+    <Content Include="Uploads\LibraryImages\2009731151772_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009731158475.jpg" />
+    <Content Include="Uploads\LibraryImages\2009731158475_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200973122413.jpg" />
+    <Content Include="Uploads\LibraryImages\200973122413_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200973123475.jpg" />
+    <Content Include="Uploads\LibraryImages\200973123475_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200973161638.jpg" />
+    <Content Include="Uploads\LibraryImages\200973161638_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009731617600.jpg" />
+    <Content Include="Uploads\LibraryImages\2009731617600_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009731618194.jpg" />
+    <Content Include="Uploads\LibraryImages\2009731618194_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009731620272.jpg" />
+    <Content Include="Uploads\LibraryImages\2009731620272_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009731628882.jpg" />
+    <Content Include="Uploads\LibraryImages\2009731628882_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009731634507.jpg" />
+    <Content Include="Uploads\LibraryImages\2009731634507_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009731644554.jpg" />
+    <Content Include="Uploads\LibraryImages\2009731644554_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009741852555.jpg" />
+    <Content Include="Uploads\LibraryImages\2009741852555_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009751842432.jpg" />
+    <Content Include="Uploads\LibraryImages\2009751842432_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009751845260.jpg" />
+    <Content Include="Uploads\LibraryImages\2009751845354.jpg" />
+    <Content Include="Uploads\LibraryImages\2009751848448.jpg" />
+    <Content Include="Uploads\LibraryImages\2009751848448_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009751849901.jpg" />
+    <Content Include="Uploads\LibraryImages\2009751849901_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200975185173.jpg" />
+    <Content Include="Uploads\LibraryImages\200975185173_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009751854229.jpg" />
+    <Content Include="Uploads\LibraryImages\2009751854229_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009751856229.jpg" />
+    <Content Include="Uploads\LibraryImages\2009751856229_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200975193401.jpg" />
+    <Content Include="Uploads\LibraryImages\200975193401_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200975195510.jpg" />
+    <Content Include="Uploads\LibraryImages\200975195510_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009781644932.jpg" />
+    <Content Include="Uploads\LibraryImages\2009781644932_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009791713292.jpg" />
+    <Content Include="Uploads\LibraryImages\2009791713292_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009791713573.jpg" />
+    <Content Include="Uploads\LibraryImages\2009791713573_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20098101940718.jpg" />
+    <Content Include="Uploads\LibraryImages\20098101940718_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20098131038718.jpg" />
+    <Content Include="Uploads\LibraryImages\20098131038718_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20098131046484.jpg" />
+    <Content Include="Uploads\LibraryImages\20098131046484_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20098131048375.jpg" />
+    <Content Include="Uploads\LibraryImages\20098131048375_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20098131125750.jpg" />
+    <Content Include="Uploads\LibraryImages\20098131125750_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20098131214671.jpg" />
+    <Content Include="Uploads\LibraryImages\20098131214671_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20098131215218.jpg" />
+    <Content Include="Uploads\LibraryImages\20098131215218_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20098131215437.jpg" />
+    <Content Include="Uploads\LibraryImages\20098131215437_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20098131215671.jpg" />
+    <Content Include="Uploads\LibraryImages\20098131215671_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20098131216750.jpg" />
+    <Content Include="Uploads\LibraryImages\20098131216750_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20098131839281.jpg" />
+    <Content Include="Uploads\LibraryImages\20098131839281_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20098131840609.jpg" />
+    <Content Include="Uploads\LibraryImages\20098131840609_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20098131841156.jpg" />
+    <Content Include="Uploads\LibraryImages\20098131841156_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20098161540906.jpg" />
+    <Content Include="Uploads\LibraryImages\20098161540906_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200981810162.jpg" />
+    <Content Include="Uploads\LibraryImages\200981810162_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20098181034140.jpg" />
+    <Content Include="Uploads\LibraryImages\20098181034140_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20098181040640.jpg" />
+    <Content Include="Uploads\LibraryImages\20098181040640_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20098181056968.jpg" />
+    <Content Include="Uploads\LibraryImages\20098181056968_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20098191030703.jpg" />
+    <Content Include="Uploads\LibraryImages\20098191030703_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20098191031156.jpg" />
+    <Content Include="Uploads\LibraryImages\20098191031156_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20098191033984.jpg" />
+    <Content Include="Uploads\LibraryImages\20098191033984_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009820850500.jpg" />
+    <Content Include="Uploads\LibraryImages\2009820850500_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009821216500.jpg" />
+    <Content Include="Uploads\LibraryImages\2009821216500_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009821516968.jpg" />
+    <Content Include="Uploads\LibraryImages\2009821521828.jpg" />
+    <Content Include="Uploads\LibraryImages\2009821524531.jpg" />
+    <Content Include="Uploads\LibraryImages\2009821524531_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200982153484.jpg" />
+    <Content Include="Uploads\LibraryImages\200982153765.jpg" />
+    <Content Include="Uploads\LibraryImages\2009821614296.jpg" />
+    <Content Include="Uploads\LibraryImages\2009821614296_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009821624218.jpg" />
+    <Content Include="Uploads\LibraryImages\2009821624218_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009824229765.jpg" />
+    <Content Include="Uploads\LibraryImages\2009824229765_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20098291024957.jpg" />
+    <Content Include="Uploads\LibraryImages\20098291024957_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20098291031582.jpg" />
+    <Content Include="Uploads\LibraryImages\20098291031582_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20098291057738.jpg" />
+    <Content Include="Uploads\LibraryImages\20098291057738_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009872138203.jpg" />
+    <Content Include="Uploads\LibraryImages\2009872138203_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009911028956.jpg" />
+    <Content Include="Uploads\LibraryImages\2009911028956_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20099141431578.jpg" />
+    <Content Include="Uploads\LibraryImages\20099141431578_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009917153673.jpg" />
+    <Content Include="Uploads\LibraryImages\2009917153673_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009917158907.jpg" />
+    <Content Include="Uploads\LibraryImages\2009917158907_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009917159142.jpg" />
+    <Content Include="Uploads\LibraryImages\2009917159142_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20099171610407.jpg" />
+    <Content Include="Uploads\LibraryImages\20099171610407_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200991716895.jpg" />
+    <Content Include="Uploads\LibraryImages\200991716895_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20099191526204.jpg" />
+    <Content Include="Uploads\LibraryImages\20099191526204_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20099241645438.jpg" />
+    <Content Include="Uploads\LibraryImages\20099241645438_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20099261044531.jpg" />
+    <Content Include="Uploads\LibraryImages\20099261044531_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009951119656.jpg" />
+    <Content Include="Uploads\LibraryImages\2009951119656_T.jpg" />
+    <Content Include="Uploads\LibraryImages\200997111231.jpg" />
+    <Content Include="Uploads\LibraryImages\2009971126218.jpg" />
+    <Content Include="Uploads\LibraryImages\2009971126218_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009971126703.jpg" />
+    <Content Include="Uploads\LibraryImages\2009971131625.jpg" />
+    <Content Include="Uploads\LibraryImages\2009971131875.jpg" />
+    <Content Include="Uploads\LibraryImages\2009971133468.jpg" />
+    <Content Include="Uploads\LibraryImages\2009971134578.jpg" />
+    <Content Include="Uploads\LibraryImages\20099711420.jpg" />
+    <Content Include="Uploads\LibraryImages\2009971143515.jpg" />
+    <Content Include="Uploads\LibraryImages\2009971528390.jpg" />
+    <Content Include="Uploads\LibraryImages\2009971528390_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009971528859.jpg" />
+    <Content Include="Uploads\LibraryImages\2009991212531.jpg" />
+    <Content Include="Uploads\LibraryImages\2009991212531_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2009991214937.jpg" />
+    <Content Include="Uploads\LibraryImages\2009991214937_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2010111554226.jpg" />
+    <Content Include="Uploads\LibraryImages\2010111554226_T.jpg" />
+    <Content Include="Uploads\LibraryImages\201011155539.jpg" />
+    <Content Include="Uploads\LibraryImages\201011155539_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2010111556773.jpg" />
+    <Content Include="Uploads\LibraryImages\2010111556773_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20101131112202.jpg" />
+    <Content Include="Uploads\LibraryImages\20101131112202_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20101131119171.jpg" />
+    <Content Include="Uploads\LibraryImages\20101131119171_T.jpg" />
+    <Content Include="Uploads\LibraryImages\20101131129702.jpg" />
+    <Content Include="Uploads\LibraryImages\20101131129702_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2010113119811.jpg" />
+    <Content Include="Uploads\LibraryImages\2010113119811_T.jpg" />
+    <Content Include="Uploads\LibraryImages\2010113173977.jpg" />
+    <Content Include="Uploads\LibraryImages\2010113173977_T.jpg" />
+    <Content Include="Uploads\LibraryImages\Core i7.jpg" />
+    <Content Include="Uploads\LibraryImages\Corei7.jpg" />
+    <Content Include="Uploads\LibraryImages\laptop.jpg" />
+    <Content Include="Uploads\LibraryImages\main.jpg" />
+    <Content Include="Uploads\LibraryImages\o cung.jpg" />
+    <Content Include="Uploads\LibraryImages\Ram.jpg" />
+    <Content Include="Uploads\LibraryImages\web_scanner_test_file.txt" />
+    <Content Include="Uploads\Logo\200812101035841.gif" />
+    <Content Include="Uploads\Logo\20081210103691.gif" />
+    <Content Include="Uploads\Logo\200812101054263.gif" />
+    <Content Include="Uploads\Logo\20094242056770.gif" />
+    <Content Include="Uploads\Logo\200943101218.gif" />
+    <Content Include="Uploads\Logo\2009519015140.gif" />
+    <Content Include="Uploads\Product\200931241010.jpg" />
+    <Content Include="Uploads\Product\200931241010_T.jpg" />
+    <Content Include="Uploads\Product\2009312419765.jpg" />
+    <Content Include="Uploads\Product\2009312419765_T.jpg" />
+    <Content Include="Uploads\Product\200931242471.jpg" />
+    <Content Include="Uploads\Product\200931242471_T.jpg" />
+    <Content Include="Uploads\Product\200931322916.jpg" />
+    <Content Include="Uploads\Product\200931322916_T.jpg" />
+    <Content Include="Uploads\Product\2009313245457.jpg" />
+    <Content Include="Uploads\Product\2009313245457_T.jpg" />
+    <Content Include="Uploads\Product\2009313256515.jpg" />
+    <Content Include="Uploads\Product\2009313256515_T.jpg" />
+    <Content Include="Uploads\Product\2009315333342.jpg" />
+    <Content Include="Uploads\Product\2009315333342_T.jpg" />
+    <Content Include="Uploads\Product\2009315333584.jpg" />
+    <Content Include="Uploads\Product\2009315333584_T.jpg" />
+    <Content Include="Uploads\Product\2009315347859.jpg" />
+    <Content Include="Uploads\Product\2009315347859_T.jpg" />
+    <Content Include="Uploads\Product\20093161217156.jpg" />
+    <Content Include="Uploads\Product\20093161217156_T.jpg" />
+    <Content Include="Uploads\Product\20093161217228.jpg" />
+    <Content Include="Uploads\Product\20093161217228_T.jpg" />
+    <Content Include="Uploads\Product\2009316121738.jpg" />
+    <Content Include="Uploads\Product\2009316121738_T.jpg" />
+    <Content Include="Uploads\Product\20093161217421.jpg" />
+    <Content Include="Uploads\Product\20093161217421_T.jpg" />
+    <Content Include="Uploads\Product\20093161217456.jpg" />
+    <Content Include="Uploads\Product\20093161217456_T.jpg" />
+    <Content Include="Uploads\Product\20093161217630.jpg" />
+    <Content Include="Uploads\Product\20093161217630_T.jpg" />
+    <Content Include="Uploads\Product\20093161217745.jpg" />
+    <Content Include="Uploads\Product\20093161217745_T.jpg" />
+    <Content Include="Uploads\Product\20093161218318.jpg" />
+    <Content Include="Uploads\Product\20093161218318_T.jpg" />
+    <Content Include="Uploads\Product\2009316121835.jpg" />
+    <Content Include="Uploads\Product\2009316121835_T.jpg" />
+    <Content Include="Uploads\Product\20093161218408.jpg" />
+    <Content Include="Uploads\Product\20093161218408_T.jpg" />
+    <Content Include="Uploads\Product\20093161218469.jpg" />
+    <Content Include="Uploads\Product\20093161218469_T.jpg" />
+    <Content Include="Uploads\Product\20093161218508.jpg" />
+    <Content Include="Uploads\Product\20093161218508_T.jpg" />
+    <Content Include="Uploads\Product\20093161218549.jpg" />
+    <Content Include="Uploads\Product\20093161218549_T.jpg" />
+    <Content Include="Uploads\Product\20093161218729.jpg" />
+    <Content Include="Uploads\Product\20093161218729_T.jpg" />
+    <Content Include="Uploads\Product\20093161218799.jpg" />
+    <Content Include="Uploads\Product\20093161218799_T.jpg" />
+    <Content Include="Uploads\Product\20093161219109.jpg" />
+    <Content Include="Uploads\Product\20093161219109_T.jpg" />
+    <Content Include="Uploads\Product\20093161219623.jpg" />
+    <Content Include="Uploads\Product\20093161219623_T.jpg" />
+    <Content Include="Uploads\Product\20093161219724.jpg" />
+    <Content Include="Uploads\Product\20093161219724_T.jpg" />
+    <Content Include="Uploads\Product\20093161219746.jpg" />
+    <Content Include="Uploads\Product\20093161219746_T.jpg" />
+    <Content Include="Uploads\Product\20093161219813.jpg" />
+    <Content Include="Uploads\Product\20093161219813_T.jpg" />
+    <Content Include="Uploads\Product\20093161219851.jpg" />
+    <Content Include="Uploads\Product\20093161219851_T.jpg" />
+    <Content Include="Uploads\Product\20093161219985.jpg" />
+    <Content Include="Uploads\Product\20093161219985_T.jpg" />
+    <Content Include="Uploads\Product\200931612203.jpg" />
+    <Content Include="Uploads\Product\20093161220362.jpg" />
+    <Content Include="Uploads\Product\20093161220362_T.jpg" />
+    <Content Include="Uploads\Product\200931612203_T.jpg" />
+    <Content Include="Uploads\Product\20093161220698.jpg" />
+    <Content Include="Uploads\Product\20093161220698_T.jpg" />
+    <Content Include="Uploads\Product\20093161220747.jpg" />
+    <Content Include="Uploads\Product\20093161220747_T.jpg" />
+    <Content Include="Uploads\Product\20093161220754.jpg" />
+    <Content Include="Uploads\Product\20093161220754_T.jpg" />
+    <Content Include="Uploads\Product\20093161220836.jpg" />
+    <Content Include="Uploads\Product\20093161220836_T.jpg" />
+    <Content Include="Uploads\Product\2009316122142.jpg" />
+    <Content Include="Uploads\Product\2009316122142_T.jpg" />
+    <Content Include="Uploads\Product\2009316122162.jpg" />
+    <Content Include="Uploads\Product\2009316122162_T.jpg" />
+    <Content Include="Uploads\Product\2009316122237.jpg" />
+    <Content Include="Uploads\Product\2009316122237_T.jpg" />
+    <Content Include="Uploads\Product\2009316122367.jpg" />
+    <Content Include="Uploads\Product\2009316122367_T.jpg" />
+    <Content Include="Uploads\Product\2009316122873.jpg" />
+    <Content Include="Uploads\Product\2009316122873_T.jpg" />
+    <Content Include="Uploads\Product\200931612293.jpg" />
+    <Content Include="Uploads\Product\200931612293_T.jpg" />
+    <Content Include="Uploads\Product\2009316123191.jpg" />
+    <Content Include="Uploads\Product\2009316123191_T.jpg" />
+    <Content Include="Uploads\Product\2009316123335.jpg" />
+    <Content Include="Uploads\Product\2009316123335_T.jpg" />
+    <Content Include="Uploads\Product\2009316123763.jpg" />
+    <Content Include="Uploads\Product\2009316123763_T.jpg" />
+    <Content Include="Uploads\Product\2009316123884.jpg" />
+    <Content Include="Uploads\Product\2009316123884_T.jpg" />
+    <Content Include="Uploads\Product\20093161311283.jpg" />
+    <Content Include="Uploads\Product\20093161311283_T.jpg" />
+    <Content Include="Uploads\Product\20093161311370.jpg" />
+    <Content Include="Uploads\Product\20093161311370_T.jpg" />
+    <Content Include="Uploads\Product\20093161311754.jpg" />
+    <Content Include="Uploads\Product\20093161311754_T.jpg" />
+    <Content Include="Uploads\Product\20093161311994.jpg" />
+    <Content Include="Uploads\Product\20093161311994_T.jpg" />
+    <Content Include="Uploads\Product\20093161318675.jpg" />
+    <Content Include="Uploads\Product\20093161318675_T.jpg" />
+    <Content Include="Uploads\Product\2009316131951.jpg" />
+    <Content Include="Uploads\Product\2009316131951_T.jpg" />
+    <Content Include="Uploads\Product\200931828217.jpg" />
+    <Content Include="Uploads\Product\200931828217_T.jpg" />
+    <Content Include="Uploads\Product\20093182830.jpg" />
+    <Content Include="Uploads\Product\20093182830_T.jpg" />
+    <Content Include="Uploads\Product\200931828670.jpg" />
+    <Content Include="Uploads\Product\200931828670_T.jpg" />
+    <Content Include="Uploads\Product\2009319047874.jpg" />
+    <Content Include="Uploads\Product\2009319047874_T.jpg" />
+    <Content Include="Uploads\Product\20093191117377.jpg" />
+    <Content Include="Uploads\Product\20093191117377_T.jpg" />
+    <Content Include="Uploads\Product\20093191118254.jpg" />
+    <Content Include="Uploads\Product\20093191118254_T.jpg" />
+    <Content Include="Uploads\Product\20093191252697.jpg" />
+    <Content Include="Uploads\Product\20093191252697_T.jpg" />
+    <Content Include="Uploads\web_scanner_test_file.txt" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\ActionLogin_Delete.aspx.cs">
+      <DependentUpon>ActionLogin_Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ActionLogin_Delete.aspx.designer.cs">
+      <DependentUpon>ActionLogin_Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ActionLog_Action.aspx.cs">
+      <DependentUpon>ActionLog_Action.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ActionLog_Action.aspx.designer.cs">
+      <DependentUpon>ActionLog_Action.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ActionLog_Delete.aspx.cs">
+      <DependentUpon>ActionLog_Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ActionLog_Delete.aspx.designer.cs">
+      <DependentUpon>ActionLog_Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ActionLog_Login.aspx.cs">
+      <DependentUpon>ActionLog_Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ActionLog_Login.aspx.designer.cs">
+      <DependentUpon>ActionLog_Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BannerCat_AddNew.aspx.cs">
+      <DependentUpon>BannerCat_AddNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BannerCat_AddNew.aspx.designer.cs">
+      <DependentUpon>BannerCat_AddNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BannerCat_Edit.aspx.cs">
+      <DependentUpon>BannerCat_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BannerCat_Edit.aspx.designer.cs">
+      <DependentUpon>BannerCat_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Banner_AddNew.aspx.cs">
+      <DependentUpon>Banner_AddNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Banner_AddNew.aspx.designer.cs">
+      <DependentUpon>Banner_AddNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Banner_Category.aspx.cs">
+      <DependentUpon>Banner_Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Banner_Category.aspx.designer.cs">
+      <DependentUpon>Banner_Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Banner_Edit.aspx.cs">
+      <DependentUpon>Banner_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Banner_Edit.aspx.designer.cs">
+      <DependentUpon>Banner_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Banner_List.aspx.cs">
+      <DependentUpon>Banner_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Banner_List.aspx.designer.cs">
+      <DependentUpon>Banner_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Banner_View.aspx.cs">
+      <DependentUpon>Banner_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Banner_View.aspx.designer.cs">
+      <DependentUpon>Banner_View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Category_List.aspx.cs">
+      <DependentUpon>Category_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Category_List.aspx.designer.cs">
+      <DependentUpon>Category_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Category_Pro_Add.aspx.cs">
+      <DependentUpon>Category_Pro_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Category_Pro_Add.aspx.designer.cs">
+      <DependentUpon>Category_Pro_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Category_Pro_Edit.aspx.cs">
+      <DependentUpon>Category_Pro_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Category_Pro_Edit.aspx.designer.cs">
+      <DependentUpon>Category_Pro_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Category_Pro_List.aspx.cs">
+      <DependentUpon>Category_Pro_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Category_Pro_List.aspx.designer.cs">
+      <DependentUpon>Category_Pro_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Cat_Pro_Group_Add.aspx.cs">
+      <DependentUpon>Cat_Pro_Group_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Cat_Pro_Group_Add.aspx.designer.cs">
+      <DependentUpon>Cat_Pro_Group_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Cat_Pro_Group_Edit.aspx.cs">
+      <DependentUpon>Cat_Pro_Group_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Cat_Pro_Group_Edit.aspx.designer.cs">
+      <DependentUpon>Cat_Pro_Group_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Cat_Pro_Group_List.aspx.cs">
+      <DependentUpon>Cat_Pro_Group_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Cat_Pro_Group_List.aspx.designer.cs">
+      <DependentUpon>Cat_Pro_Group_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Customer_Detail.aspx.cs">
+      <DependentUpon>Customer_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Customer_Detail.aspx.designer.cs">
+      <DependentUpon>Customer_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Customer_List.aspx.cs">
+      <DependentUpon>Customer_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Customer_List.aspx.designer.cs">
+      <DependentUpon>Customer_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Customer_Report.aspx.cs">
+      <DependentUpon>Customer_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Customer_Report.aspx.designer.cs">
+      <DependentUpon>Customer_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Editor_AddNew.aspx.cs">
+      <DependentUpon>Editor_AddNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Editor_AddNew.aspx.designer.cs">
+      <DependentUpon>Editor_AddNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Editor_Cat_AddNew.aspx.cs">
+      <DependentUpon>Editor_Cat_AddNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Editor_Cat_AddNew.aspx.designer.cs">
+      <DependentUpon>Editor_Cat_AddNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Editor_Cat_Delete.aspx.cs">
+      <DependentUpon>Editor_Cat_Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Editor_Cat_Delete.aspx.designer.cs">
+      <DependentUpon>Editor_Cat_Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Editor_Cat_Edit.aspx.cs">
+      <DependentUpon>Editor_Cat_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Editor_Cat_Edit.aspx.designer.cs">
+      <DependentUpon>Editor_Cat_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Editor_Cat_List.aspx.cs">
+      <DependentUpon>Editor_Cat_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Editor_Cat_List.aspx.designer.cs">
+      <DependentUpon>Editor_Cat_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Editor_Cat_Order.aspx.cs">
+      <DependentUpon>Editor_Cat_Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Editor_Cat_Order.aspx.designer.cs">
+      <DependentUpon>Editor_Cat_Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Editor_Edit.aspx.cs">
+      <DependentUpon>Editor_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Editor_Edit.aspx.designer.cs">
+      <DependentUpon>Editor_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Editor_List.aspx.cs">
+      <DependentUpon>Editor_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Editor_List.aspx.designer.cs">
+      <DependentUpon>Editor_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Editor_View.aspx.cs">
+      <DependentUpon>Editor_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Editor_View.aspx.designer.cs">
+      <DependentUpon>Editor_View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Editor_Xml_Relate_News.aspx.cs">
+      <DependentUpon>Editor_Xml_Relate_News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Editor_Xml_Relate_News.aspx.designer.cs">
+      <DependentUpon>Editor_Xml_Relate_News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EOFPermission.aspx.cs">
+      <DependentUpon>EOFPermission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EOFPermission.aspx.designer.cs">
+      <DependentUpon>EOFPermission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FAQs_AddNew.aspx.cs">
+      <DependentUpon>FAQs_AddNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FAQs_AddNew.aspx.designer.cs">
+      <DependentUpon>FAQs_AddNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FAQs_Edit.aspx.cs">
+      <DependentUpon>FAQs_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FAQs_Edit.aspx.designer.cs">
+      <DependentUpon>FAQs_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FAQs_List.aspx.cs">
+      <DependentUpon>FAQs_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FAQs_List.aspx.designer.cs">
+      <DependentUpon>FAQs_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FAQs_View.aspx.cs">
+      <DependentUpon>FAQs_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FAQs_View.aspx.designer.cs">
+      <DependentUpon>FAQs_View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Gallery_Addnew.aspx.cs">
+      <DependentUpon>Gallery_Addnew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Gallery_Addnew.aspx.designer.cs">
+      <DependentUpon>Gallery_Addnew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Gallery_Category.aspx.cs">
+      <DependentUpon>Gallery_Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Gallery_Category.aspx.designer.cs">
+      <DependentUpon>Gallery_Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Gallery_Category_AddNew.aspx.cs">
+      <DependentUpon>Gallery_Category_AddNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Gallery_Category_AddNew.aspx.designer.cs">
+      <DependentUpon>Gallery_Category_AddNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Gallery_Category_Delete.aspx.cs">
+      <DependentUpon>Gallery_Category_Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Gallery_Category_Delete.aspx.designer.cs">
+      <DependentUpon>Gallery_Category_Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Gallery_Category_Edit.aspx.cs">
+      <DependentUpon>Gallery_Category_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Gallery_Category_Edit.aspx.designer.cs">
+      <DependentUpon>Gallery_Category_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Gallery_Edit.aspx.cs">
+      <DependentUpon>Gallery_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Gallery_Edit.aspx.designer.cs">
+      <DependentUpon>Gallery_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Gallery_list.aspx.cs">
+      <DependentUpon>Gallery_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Gallery_list.aspx.designer.cs">
+      <DependentUpon>Gallery_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Gallery_View.aspx.cs">
+      <DependentUpon>Gallery_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Gallery_View.aspx.designer.cs">
+      <DependentUpon>Gallery_View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LibraryCatImage_List.aspx.cs">
+      <DependentUpon>LibraryCatImage_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\LibraryCatImage_List.aspx.designer.cs">
+      <DependentUpon>LibraryCatImage_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LibraryImage_AddNew.aspx.cs">
+      <DependentUpon>LibraryImage_AddNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\LibraryImage_AddNew.aspx.designer.cs">
+      <DependentUpon>LibraryImage_AddNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LibraryImage_Edit.aspx.cs">
+      <DependentUpon>LibraryImage_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\LibraryImage_Edit.aspx.designer.cs">
+      <DependentUpon>LibraryImage_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LibraryImage_List.aspx.cs">
+      <DependentUpon>LibraryImage_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\LibraryImage_List.aspx.designer.cs">
+      <DependentUpon>LibraryImage_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LibraryImage_Popup.aspx.cs">
+      <DependentUpon>LibraryImage_Popup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\LibraryImage_Popup.aspx.designer.cs">
+      <DependentUpon>LibraryImage_Popup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LibraryImage_View.aspx.cs">
+      <DependentUpon>LibraryImage_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\LibraryImage_View.aspx.designer.cs">
+      <DependentUpon>LibraryImage_View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Library_CatImage_AddNew.aspx.cs">
+      <DependentUpon>Library_CatImage_AddNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Library_CatImage_AddNew.aspx.designer.cs">
+      <DependentUpon>Library_CatImage_AddNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Library_CatImage_Delete.aspx.cs">
+      <DependentUpon>Library_CatImage_Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Library_CatImage_Delete.aspx.designer.cs">
+      <DependentUpon>Library_CatImage_Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Library_CatImage_Edit.aspx.cs">
+      <DependentUpon>Library_CatImage_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Library_CatImage_Edit.aspx.designer.cs">
+      <DependentUpon>Library_CatImage_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LogoCat_AddNew.aspx.cs">
+      <DependentUpon>LogoCat_AddNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\LogoCat_AddNew.aspx.designer.cs">
+      <DependentUpon>LogoCat_AddNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LogoCat_Edit.aspx.cs">
+      <DependentUpon>LogoCat_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\LogoCat_Edit.aspx.designer.cs">
+      <DependentUpon>LogoCat_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Logo_AddNew.aspx.cs">
+      <DependentUpon>Logo_AddNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Logo_AddNew.aspx.designer.cs">
+      <DependentUpon>Logo_AddNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Logo_Category.aspx.cs">
+      <DependentUpon>Logo_Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Logo_Category.aspx.designer.cs">
+      <DependentUpon>Logo_Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Logo_Edit.aspx.cs">
+      <DependentUpon>Logo_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Logo_Edit.aspx.designer.cs">
+      <DependentUpon>Logo_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Logo_list.aspx.cs">
+      <DependentUpon>Logo_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Logo_list.aspx.designer.cs">
+      <DependentUpon>Logo_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Logo_View.aspx.cs">
+      <DependentUpon>Logo_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Logo_View.aspx.designer.cs">
+      <DependentUpon>Logo_View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MemberGroup_AddNew.aspx.cs">
+      <DependentUpon>MemberGroup_AddNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MemberGroup_AddNew.aspx.designer.cs">
+      <DependentUpon>MemberGroup_AddNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MemberGroup_Edit.aspx.cs">
+      <DependentUpon>MemberGroup_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MemberGroup_Edit.aspx.designer.cs">
+      <DependentUpon>MemberGroup_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MemberGroup_List.aspx.cs">
+      <DependentUpon>MemberGroup_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MemberGroup_List.aspx.designer.cs">
+      <DependentUpon>MemberGroup_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Member_AddNew.aspx.cs">
+      <DependentUpon>Member_AddNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Member_AddNew.aspx.designer.cs">
+      <DependentUpon>Member_AddNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Member_ChangePassword.aspx.cs">
+      <DependentUpon>Member_ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Member_ChangePassword.aspx.designer.cs">
+      <DependentUpon>Member_ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Member_Edit.aspx.cs">
+      <DependentUpon>Member_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Member_Edit.aspx.designer.cs">
+      <DependentUpon>Member_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Member_List.aspx.cs">
+      <DependentUpon>Member_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Member_List.aspx.designer.cs">
+      <DependentUpon>Member_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Member_YourAccount.aspx.cs">
+      <DependentUpon>Member_YourAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Member_YourAccount.aspx.designer.cs">
+      <DependentUpon>Member_YourAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\NewHangSX.aspx.cs">
+      <DependentUpon>NewHangSX.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\NewHangSX.aspx.designer.cs">
+      <DependentUpon>NewHangSX.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OrderBillDetails.aspx.cs">
+      <DependentUpon>OrderBillDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OrderBillDetails.aspx.designer.cs">
+      <DependentUpon>OrderBillDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OrderBill_Add.aspx.cs">
+      <DependentUpon>OrderBill_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OrderBill_Add.aspx.designer.cs">
+      <DependentUpon>OrderBill_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OrderBill_List.aspx.cs">
+      <DependentUpon>OrderBill_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OrderBill_List.aspx.designer.cs">
+      <DependentUpon>OrderBill_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OrderDetails.aspx.cs">
+      <DependentUpon>OrderDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OrderDetails.aspx.designer.cs">
+      <DependentUpon>OrderDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Order_List.aspx.cs">
+      <DependentUpon>Order_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Order_List.aspx.designer.cs">
+      <DependentUpon>Order_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PaymentOrder.aspx.cs">
+      <DependentUpon>PaymentOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PaymentOrder.aspx.designer.cs">
+      <DependentUpon>PaymentOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PaymentOrder_Add.aspx.cs">
+      <DependentUpon>PaymentOrder_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PaymentOrder_Add.aspx.designer.cs">
+      <DependentUpon>PaymentOrder_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Product_Addnew.aspx.cs">
+      <DependentUpon>Product_Addnew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Product_Addnew.aspx.designer.cs">
+      <DependentUpon>Product_Addnew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Product_Cat_AddNew.aspx.cs">
+      <DependentUpon>Product_Cat_AddNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Product_Cat_AddNew.aspx.designer.cs">
+      <DependentUpon>Product_Cat_AddNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Product_Cat_Delete.aspx.cs">
+      <DependentUpon>Product_Cat_Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Product_Cat_Delete.aspx.designer.cs">
+      <DependentUpon>Product_Cat_Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Product_Cat_Edit.aspx.cs">
+      <DependentUpon>Product_Cat_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Product_Cat_Edit.aspx.designer.cs">
+      <DependentUpon>Product_Cat_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Product_Cat_List.aspx.cs">
+      <DependentUpon>Product_Cat_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Product_Cat_List.aspx.designer.cs">
+      <DependentUpon>Product_Cat_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Product_Edit.aspx.cs">
+      <DependentUpon>Product_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Product_Edit.aspx.designer.cs">
+      <DependentUpon>Product_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Product_List.aspx.cs">
+      <DependentUpon>Product_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Product_List.aspx.designer.cs">
+      <DependentUpon>Product_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Provider_Add.aspx.cs">
+      <DependentUpon>Provider_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Provider_Add.aspx.designer.cs">
+      <DependentUpon>Provider_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Provider_Debt.aspx.cs">
+      <DependentUpon>Provider_Debt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Provider_Debt.aspx.designer.cs">
+      <DependentUpon>Provider_Debt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Provider_Edit.aspx.cs">
+      <DependentUpon>Provider_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Provider_Edit.aspx.designer.cs">
+      <DependentUpon>Provider_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Provider_List.aspx.cs">
+      <DependentUpon>Provider_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Provider_List.aspx.designer.cs">
+      <DependentUpon>Provider_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Provider_Report.aspx.cs">
+      <DependentUpon>Provider_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Provider_Report.aspx.designer.cs">
+      <DependentUpon>Provider_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Recruit_AddNew.aspx.cs">
+      <DependentUpon>Recruit_AddNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Recruit_AddNew.aspx.designer.cs">
+      <DependentUpon>Recruit_AddNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Recruit_Edit.aspx.cs">
+      <DependentUpon>Recruit_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Recruit_Edit.aspx.designer.cs">
+      <DependentUpon>Recruit_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Recruit_List.aspx.cs">
+      <DependentUpon>Recruit_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Recruit_List.aspx.designer.cs">
+      <DependentUpon>Recruit_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Recruit_View.aspx.cs">
+      <DependentUpon>Recruit_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Recruit_View.aspx.designer.cs">
+      <DependentUpon>Recruit_View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Report_Other.aspx.cs">
+      <DependentUpon>Report_Other.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Report_Other.aspx.designer.cs">
+      <DependentUpon>Report_Other.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SignOut.aspx.cs">
+      <DependentUpon>SignOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\Admin\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\Admin\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Admin\Left.ascx.cs">
+      <DependentUpon>Left.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\Admin\Left.ascx.designer.cs">
+      <DependentUpon>Left.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\User\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\User\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\User\Left.ascx.cs">
+      <DependentUpon>Left.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\User\Left.ascx.designer.cs">
+      <DependentUpon>Left.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\User\LeftNews.ascx.cs">
+      <DependentUpon>LeftNews.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\User\LeftNews.ascx.designer.cs">
+      <DependentUpon>LeftNews.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\User\Right.ascx.cs">
+      <DependentUpon>Right.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\User\Right.ascx.designer.cs">
+      <DependentUpon>Right.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Build.aspx.cs">
+      <DependentUpon>Build.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Build.aspx.designer.cs">
+      <DependentUpon>Build.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\CartShow.aspx.cs">
+      <DependentUpon>CartShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\CartShow.aspx.designer.cs">
+      <DependentUpon>CartShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\CheckCustomer.aspx.cs">
+      <DependentUpon>CheckCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\CheckCustomer.aspx.designer.cs">
+      <DependentUpon>CheckCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Erros.aspx.cs">
+      <DependentUpon>Erros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Erros.aspx.designer.cs">
+      <DependentUpon>Erros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\NewsDetails.aspx.cs">
+      <DependentUpon>NewsDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\NewsDetails.aspx.designer.cs">
+      <DependentUpon>NewsDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\PreviewOrder.aspx.cs">
+      <DependentUpon>PreviewOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\PreviewOrder.aspx.designer.cs">
+      <DependentUpon>PreviewOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\ProcessOrder.aspx.cs">
+      <DependentUpon>ProcessOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\ProcessOrder.aspx.designer.cs">
+      <DependentUpon>ProcessOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\ProductDetails.aspx.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\ProductDetails.aspx.designer.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Recruitment.aspx.cs">
+      <DependentUpon>Recruitment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Recruitment.aspx.designer.cs">
+      <DependentUpon>Recruitment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\ShowNews.aspx.cs">
+      <DependentUpon>ShowNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\ShowNews.aspx.designer.cs">
+      <DependentUpon>ShowNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\ShowProduct.aspx.cs">
+      <DependentUpon>ShowProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\ShowProduct.aspx.designer.cs">
+      <DependentUpon>ShowProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.Master.cs">
+      <DependentUpon>User.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User.Master.designer.cs">
+      <DependentUpon>User.Master</DependentUpon>
+    </Compile>
+    <Compile Include="User2.Master.cs">
+      <DependentUpon>User2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User2.Master.designer.cs">
+      <DependentUpon>User2.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="FCKeditor\editor\dialog\fck_docprops\" />
+    <Folder Include="FCKeditor\editor\filemanager\browser\default\connectors\aspx\UserFiles\Image\" />
+    <Folder Include="FCKeditor\editor\filemanager\upload\aspx\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage.Master" />
+    <Content Include="User.Master" />
+    <Content Include="User2.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FCKeditor\Desktop_.ini" />
+    <None Include="FCKeditor\editor\Desktop_.ini" />
+    <None Include="FCKeditor\editor\dialog\Desktop_.ini" />
+    <None Include="FCKeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.cfm" />
+    <None Include="FCKeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php" />
+    <None Include="FCKeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.pl" />
+    <None Include="FCKeditor\editor\dialog\fck_universalkey\Desktop_.ini" />
+    <None Include="FCKeditor\editor\filemanager\browser\default\images\Desktop_.ini" />
+    <None Include="FCKeditor\editor\filemanager\browser\default\images\icons\32\Desktop_.ini" />
+    <None Include="FCKeditor\editor\filemanager\browser\default\images\icons\Desktop_.ini" />
+    <None Include="FCKeditor\editor\lang\Desktop_.ini" />
+    <None Include="FCKeditor\editor\_source\classes\Desktop_.ini" />
+    <None Include="FCKeditor\editor\_source\internals\Desktop_.ini" />
+    <None Include="Images\Admin\calendar\Desktop_.ini" />
+    <None Include="Images\Admin\calendar\Thumbs.db" />
+    <None Include="Images\Admin\Desktop_.ini" />
+    <None Include="Images\Admin\Thumbs.db" />
+    <None Include="Uploads\LibraryImages\Thumbs.db" />
+    <None Include="Uploads\Product\Thumbs.db" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1998</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

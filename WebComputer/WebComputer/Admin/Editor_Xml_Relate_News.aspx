@@ -1,0 +1,1 @@
+<%@ Page Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Editor_Xml_Relate_News.aspx.cs" Inherits="WebComputer.Admin.Editor_Xml_Relate_News" Title="Untitled Page" %>

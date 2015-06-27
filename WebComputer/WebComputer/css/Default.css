@@ -1,0 +1,143 @@
+﻿body {
+}
+/*Banner*/
+.Banner
+{
+	width:100%;
+	height:150px;
+	border:0px;	
+}
+.TDTopBanner
+{
+	width:100%;
+	height:137px;
+}
+.TDBottomBanner
+{
+	width:100%;
+	height:13px;
+	text-align:left;
+	font-family:Arial;
+	font-weight:bold;
+	color:Black;
+	font-size:8pt;
+	background-image:url('../Images/barTopMenu.gif')
+}
+/*End Banner*/
+/*ManuLeft*/
+.ManuLeft
+{
+	width:200px;
+	height:auto;
+	padding-top:6px;padding-left:4px;padding-right:4px;
+	border:0px;	
+	background-color:#e6e6e6;
+}
+.TabbleChildManuLeft
+{
+		
+}
+.TDImage
+{
+		width:50%;
+		height:auto;
+}
+.TDEmpty
+{
+	width:100%;
+	height:10px;	
+}
+.TDSearch
+{
+	text-align:left;
+	width:100%;
+	height:auto;
+	color:Black;
+	font-family:Arial;
+	font-weight:bold;
+	font-size:8pt;	
+}
+.TDtxtSearch
+{
+	width:70%;	
+}
+.TDbtnSearch
+{
+	width:30%;	
+}
+.TDNews
+{
+	width:100%;
+	height:23px;
+	color:White;
+	background-color:#548d70;
+	font-family:Arial;
+	font-size:10pt;
+	font-weight:bold;	
+}
+.TDNewsDetails
+{
+	width:100%;
+	height:100px;
+	background-color:White;	
+}
+.categoryM {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #1a5c99
+}
+.categoryM A {
+	COLOR: #1a5c99
+}
+/*End ManuLeft*/
+/*Manu Right*/
+.TableManuRight
+{
+	width:165px;
+	height:auto;
+	border:0px;
+	padding:4px;
+		
+}
+.TDImageCategory
+{
+	width:30%;
+	height:auto;
+}
+.TDCategory
+{
+	width:70%;
+	height:auto;
+	font-family:Arial;
+	font-size:10pt;
+	color:Black;	
+}
+/*End Manu Right*/
+/*Master Page*/
+.TableMas
+{
+	width:100%;
+	height:auto;
+	border:0px;
+	margin:0px;
+	padding:0px;	
+}
+.TDBanner
+{
+	width:100%;
+	height:150px;	
+}
+.TDLeft
+{
+	width:200px;
+	height:auto;	
+}
+/*End Master Page*/
+A 
+{
+	TEXT-DECORATION: none;
+	color:Black;
+	text-align:center;
+}
+A:hover 
+{
+	COLOR: #006db2;
+}

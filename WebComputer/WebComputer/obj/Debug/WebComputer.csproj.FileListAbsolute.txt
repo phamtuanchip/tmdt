@@ -1,0 +1,19 @@
+c:\users\tieppb\documents\visual studio 2010\Projects\WebComputer\WebComputer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Tieppb\Desktop\WebComputer\WebComputer\bin\WebComputer.dll
+C:\Users\Tieppb\Desktop\WebComputer\WebComputer\bin\WebComputer.pdb
+C:\Users\Tieppb\Desktop\WebComputer\WebComputer\bin\Bussiness.dll
+C:\Users\Tieppb\Desktop\WebComputer\WebComputer\bin\Entity.dll
+C:\Users\Tieppb\Desktop\WebComputer\WebComputer\bin\Bussiness.pdb
+C:\Users\Tieppb\Desktop\WebComputer\WebComputer\bin\Entity.pdb
+C:\Users\Tieppb\Desktop\WebComputer\WebComputer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Tieppb\Desktop\WebComputer\WebComputer\obj\Debug\WebComputer.dll
+C:\Users\Tieppb\Desktop\WebComputer\WebComputer\obj\Debug\WebComputer.pdb
+F:\data center\Topica\Project thuc tap\WebComputer\WebComputer\obj\Debug\ResolveAssemblyReference.cache
+F:\data center\Topica\Project thuc tap\WebComputer\WebComputer\bin\WebComputer.dll
+F:\data center\Topica\Project thuc tap\WebComputer\WebComputer\bin\WebComputer.pdb
+F:\data center\Topica\Project thuc tap\WebComputer\WebComputer\bin\Bussiness.dll
+F:\data center\Topica\Project thuc tap\WebComputer\WebComputer\bin\Entity.dll
+F:\data center\Topica\Project thuc tap\WebComputer\WebComputer\bin\Bussiness.pdb
+F:\data center\Topica\Project thuc tap\WebComputer\WebComputer\bin\Entity.pdb
+F:\data center\Topica\Project thuc tap\WebComputer\WebComputer\obj\Debug\WebComputer.dll
+F:\data center\Topica\Project thuc tap\WebComputer\WebComputer\obj\Debug\WebComputer.pdb
