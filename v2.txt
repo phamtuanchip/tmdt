@@ -1,0 +1,10 @@
+Site Name:	http://tuanpham-001-site1.1tempurl.com
+InstallPath:	h:\root\home\tuanpham-001\www\site1/
+(Step 2 of 7) - Create New MsSQLDB
+Database Name:	db_9d5484_phamtuanchip_1
+Username:	DB_9d5484_phamtuanchip_1_admin
+Password:	1234@abcd
+Application URL：	http://tuanpham-001-site1.1tempurl.com
+Application Backend URL	http://tuanpham-001-site1.1tempurl.com/admin
+Administrator Login ID	admin@yourstore.com
+Administrator Password	adminadmin
